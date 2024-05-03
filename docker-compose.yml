@@ -1,0 +1,68 @@
+services:
+  knowledge:
+    build: ./knowledge/.
+    expose:
+    - 7200
+    ports: ["7200:7200"]
+    networks:
+    - docker_network
+    command: -s
+
+  # Johanna + Shihan + Selene + Pei-Yu + Floris
+  # - Question Reasoning (rule-based): Floris 
+  # - Advice Reasoning: Johanna
+  reasoning:
+    build: ./reasoning/.
+    expose:
+    - 5000
+    networks:
+    - docker_network
+    volumes:
+    - ./reasoning/src:/src
+    - ./reasoning/data:/data
+
+  # Cristina + Floris
+  response-generator:
+    build: ./response-generator/.
+    expose:
+    - 5000
+    networks:
+    - docker_network
+    volumes:
+    - ./response-generator/src:/src
+  
+  # Stergios + Selene/Floris
+  text-to-triples:
+    build: ./text-to-triples/.
+    expose:
+    - 5000
+    networks:
+    - docker_network
+    volumes:
+    - ./text-to-triples/src:/src
+  
+  # Quirine
+  front-end:
+    build: ./front-end/.
+    expose:
+    - 8000
+    ports: ["8000:8000"]
+    networks:
+    - docker_network
+    volumes:
+    - ./front-end/src:/src
+    - ./front-end/data:/data
+  
+  # Shaad
+  logger:
+    build: ./logger/.
+    expose:
+    - 5000
+    networks:
+    - docker_network
+    volumes:
+    - ./logger/src:/src
+  
+networks:
+  docker_network:
+    driver: bridge
