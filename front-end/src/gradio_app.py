@@ -33,6 +33,24 @@ def init():
     return f"There was potentially a problem with initializing the repository (status code {res.status_code}): {res.text}"
 
 
+@app.get('/load_kg')
+def load_kg():
+    repo_name ='repo-test-1'
+    data_path = '/data/data.rdf'
+    #curl -X POST -H "Content-Type:application/rdf+xml" \
+    # -T knowledge/data/data.rdf http://localhost:7200/repositories/repo-test-1/statements
+    with open(data_path, 'rb') as f:
+        statements = f.read()
+    res = requests.post(
+        f'http://knowledge:7200/repositories/{repo_name}/statements',
+        headers={'Content-Type': 'application/rdf+xml'},
+        data=statements
+    )
+    if res.status_code in range(200, 300):
+        return f"Successfully loaded initial statements into GraphDB repository {repo_name} (status code {res.status_code})"
+    return f"There was a problem with loading the initial statements into the repository {repo_name} (status code {res.status_code}): {res.text}"
+
+
 @app.get('/ping/{name}')
 def ping(name: str):
     r = requests.get(f'http://{name}:5000/')

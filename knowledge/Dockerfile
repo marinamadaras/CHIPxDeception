@@ -1,4 +1,4 @@
-FROM ontotext/graphdb:9.11.2-se
+FROM ontotext/graphdb:10.6.3
 
 # Copy over data
 COPY data /data
