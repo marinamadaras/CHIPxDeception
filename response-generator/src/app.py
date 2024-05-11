@@ -11,9 +11,13 @@ reasoner_response = None
 
 
 def generate_response(r_resp, s_data):
-    # Here we should do something with the information and generate a response
-    # For now it just parrots the sentence
-    return f"Hey! You just typed '{s_data['sentence']}' to me! How cool!"
+    response_text = r_resp["text"]
+    name = s_data["patient_name"]
+    verb = "wants"
+    if r_resp["type"] == "Q":
+        return f'{name}, {response_text}?'
+    else:
+        return f'{name} {verb} {response_text}.'
 
 
 def check_responses():
