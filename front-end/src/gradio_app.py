@@ -39,8 +39,8 @@ def load_kg():
     data_path = '/data/data.rdf'
     #curl -X POST -H "Content-Type:application/rdf+xml" \
     # -T knowledge/data/data.rdf http://localhost:7200/repositories/repo-test-1/statements
-    with open(data_path, 'rb') as f:
-        statements = f.read()
+    with open(data_path, 'rb') as rdf_file:
+        statements = rdf_file.read()
     res = requests.post(
         f'http://knowledge:7200/repositories/{repo_name}/statements',
         headers={'Content-Type': 'application/rdf+xml'},
