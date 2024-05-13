@@ -1,0 +1,26 @@
+[
+    {
+        "patient_name": "Selene",
+        "sentences": [
+            "I like water.",
+            "I want a healthy lifestyle."
+        ],
+        "timestamp": "2024-05-01T15:45:00Z"
+    },
+    {
+        "patient_name": "John",
+        "sentences": [
+            "I have been trying to keep track of my blood sugar levels at home, but they seem very erratic."
+        ],
+        "timestamp": "2024-06-02T19:10:00Z"
+    },
+    {
+        "patient_name": "Irene",
+        "sentences": [
+            "I read about a new medication for type 2 diabetes that has fewer side effects."
+        ],
+        "timestamp": "2022-02-01T10:45:10Z"
+    }
+]
+
+
