@@ -6,7 +6,6 @@ services:
     ports: ["7200:7200"]
     networks:
     - docker_network
-    command: -s
 
   # Johanna + Shihan + Selene + Pei-Yu + Floris
   # - Question Reasoning (rule-based): Floris 

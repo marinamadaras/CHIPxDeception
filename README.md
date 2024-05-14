@@ -9,7 +9,7 @@ The first time you do this it may take a while, as it needs to download all the 
 
 3. As soon as that is done, you may run `docker-compose up`, to bring the whole system up.
 
-If this succeeded, you can go to `localhost:8000` in your favorite browser, the system should welcome you. The Gradio interface can be accessed at `localhost:8000/gradio`. You may initialize the knowledge repository with `localhost:8000/init`.
+If this succeeded, you can go to `localhost:8000` in your favorite browser, the system should welcome you. The Gradio interface can be accessed at `localhost:8000/gradio`. You may initialize the knowledge repository with `localhost:8000/init` and load the initial knowledge graph with `localhost:8000/load_kg`.
 
 In the Docker Desktop dashboard, you can also see all of the containers and their status, and you may click them to inspect their logs, or even login to perform commands on them. See this guide for more info: https://docs.docker.com/desktop/use-desktop/
 
