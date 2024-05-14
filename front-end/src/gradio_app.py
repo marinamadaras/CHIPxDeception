@@ -8,7 +8,7 @@ CUSTOM_PATH = "/gradio"
 
 app = FastAPI()
 
-def init_repository():
+def init_repository() -> None:
     """
     Initializes the knowledge repository.
     Returns `None` if successfull and raises a ValueError otherwise.
@@ -18,7 +18,7 @@ def init_repository():
     if result.status_code not in range(200, 300):
         raise ValueError(f"There was potentially a problem with initializing the repository (status code {res.status_code}): {res.text}")
 
-def load_kg(repository: str):
+def load_kg(repository: str) -> None:
     """
     Loads initial knowledge graph into `repository_name`.
     Returns `None` if successfull and raises a ValueError otherwise.
@@ -32,9 +32,7 @@ def load_kg(repository: str):
         data=statements
     )
     if result.status_code not in range(200, 300):
-        return f"There was a problem with loading the initial statements into the repository {repository} (status code {res.status_code}): {res.text}"
-    #TODO: return a better response type
-    return result
+        raise ValueError(f"There was a problem with loading the initial statements into the repository {repository} (status code {res.status_code}): {res.text}")
 
 @app.get("/")
 def read_main():
