@@ -34,7 +34,7 @@ def extract_triples(patients_data):
 
 
 def main():
-    file_path = 'C:/Users/ntanavarass/Desktop/chip-demo/text-to-triples/src/patient_conversations.json' # Specify the absolute path to the directory containing patient conversations
+    file_path = 'C:/Users/ntanavarass/Desktop/chip-demo/text-to-triples/src/patient_conversations.json' # specify the absolute path to the directory containing patient conversations
     with open(file_path, 'r') as file:
         conversations = json.load(file)
     
