@@ -5,15 +5,29 @@ import json
 app = Flask(__name__)
 app.debug = True
 
-# The two things we need
-sentence_data = None
-reasoner_response = None
+# Example of data
+sentence_data = {"triples":{"subject": "Julia",
+                            "object": "medicine",
+                            "predicate": "hasPreference"}}
+
+reasoner_response = {"type": "A",
+                    "data": "medicine"}
 
 
-def generate_response(r_resp, s_data):
-    # Here we should do something with the information and generate a response
-    # For now it just parrots the sentence
-    return f"Hey! You just typed '{s_data['sentence']}' to me! How cool!"
+def generate_response(sentence_data, reasoner_response):
+    sub = sentence_data["triples"]["subject"]
+    obj = sentence_data["triples"]["object"]
+    pred = sentence_data["triples"]["predicate"]
+
+    response_type = reasoner_response["type"]
+    response_data = reasoner_response["data"]
+
+    if response_type == "Q":
+        return f"{sub}, {response_data}?"
+    elif response_type == "A":
+        return f"{sub}" has a preference for {response_data}.
+    else:
+        return "Invalid response."
 
 
 def check_responses():
