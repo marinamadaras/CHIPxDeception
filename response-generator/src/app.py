@@ -13,7 +13,6 @@ sentence_data = {"triples":{"subject": "Julia",
 reasoner_response = {"type": "A",
                     "data": "medicine"}
 
-
 def generate_response(sentence_data, reasoner_response):
     sub = sentence_data["triples"]["subject"]
     obj = sentence_data["triples"]["object"]
@@ -25,7 +24,7 @@ def generate_response(sentence_data, reasoner_response):
     if response_type == "Q":
         return f"{sub}, {response_data}?"
     elif response_type == "A":
-        return f"{sub}" has a preference for {response_data}.
+        return f"{sub} has a preference for {response_data}"
     else:
         return "Invalid response."
 
@@ -64,16 +63,9 @@ def submit_reasoner_response():
 
     return 'OK'
 
-
 @app.route('/')
 def hello():
     return 'Hello, I am the response generator module!'
-
-
-@app.route('/ping/<name>')
-def ping(name):
-    r = requests.get(f'http://{name}:5000/')
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
