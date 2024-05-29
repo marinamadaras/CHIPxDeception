@@ -16,7 +16,7 @@ def init_repository() -> None:
     files = {'config': ('config', open('/data/repo-config.ttl', 'rb'))}
     result = requests.post(f'http://knowledge:7200/rest/repositories', files=files)
     if result.status_code not in range(200, 300):
-        raise ValueError(f"There was potentially a problem with initializing the repository (status code {res.status_code}): {res.text}")
+        raise ValueError(f"There was potentially a problem with initializing the repository (status code {result.status_code}): {result.text}")
 
 def load_kg(repository: str) -> None:
     """
@@ -32,7 +32,7 @@ def load_kg(repository: str) -> None:
         data=statements
     )
     if result.status_code not in range(200, 300):
-        raise ValueError(f"There was a problem with loading the initial statements into the repository {repository} (status code {res.status_code}): {res.text}")
+        raise ValueError(f"There was a problem with loading the initial statements into the repository {repository} (status code {result.status_code}): {result.text}")
 
 @app.get("/")
 def read_main():

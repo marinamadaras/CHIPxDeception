@@ -12,22 +12,25 @@ def get_db_connection(address):
 def reason_question() -> dict | None:
     repository_name = 'repo-test-1'
     db_connection = get_db_connection(f"http://localhost:7200/repositories/{repository}")
+    username = "Patient56"
     return {"data": rule_based_question(repository_name, db_connection)}
 
 # TODO FdH: read required facts from external file in suitable format (ttl?)
 # TODO FdH: make specific to data required for reasoning
-def get_required_facts() -> list:
+def get_required_facts(userID:str) -> list:
     return [
-        "wine:SchlossRothermelTrochenbierenausleseRiesling wine:hasSugar ?o", # a fact that is present
-        "wine:SchlossRothermelTrochenbierenausleseRiesling wine:hasPrice ?o", # a fact that is not present
-        "wine:SchlossRothermelTrochenbierenausleseRiesling wine:hasRating ?o", # a fact that is not present
+        f"userKG:{userID} userKG:hasEmploymentStatus ?o",
+        f"userKG:{userID} userKG:hasIncome ?o",
+        f"userKG:{userID} userKG:hasPerceivedStress ?o",
+        f"userKG:{userID} userKG:hasSleepPattern ?o",
+        f"userKG:{userID} userKG:hasValue ?o",
     ]
 
 # TODO FdH: use suitable data formats for facts and db_connection
 def query_for_presence(fact: str, db_connection) -> bool:
     # turn fact into query
     query = f"""
-    PREFIX wine: <http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#>
+    PREFIX userKG: <http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#>
 
     ASK {{
         {fact}
@@ -60,12 +63,12 @@ def sort_missing_facts(facts: list[str]) -> list:
     # TODO FdH: simple sort that always returns list in same order
     return facts
 
-def rule_based_question(repository: str, db_connection) -> dict | None:
+def rule_based_question(repository: str, userID: str, db_connection) -> dict | None:
     """
     Formulates a question based on the presence of facts in a predetermined format.
     """
     # get list of facts required for reason_advice
-    required_facts = get_required_facts()
+    required_facts = get_required_facts(userID)
 
     # get list of required facts that are not in knowledge DB
     missing_facts = get_missing_facts(repository, db_connection, required_facts)
@@ -73,6 +76,8 @@ def rule_based_question(repository: str, db_connection) -> dict | None:
     # sort the list of missing facts
     # NOTE: sort all facts instead of selecting a single fact to support combined questions later on
     missing_facts = sort_missing_facts(missing_facts)
-
-    # return the first missing fact
-    return missing_facts[0]
+    if len(missing_facts) > 0:
+        # return the first missing fact
+        return missing_facts[0]
+    else:
+        return None
