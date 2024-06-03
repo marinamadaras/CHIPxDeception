@@ -6,25 +6,23 @@ app = Flask(__name__)
 app.debug = True
 
 # Example of data
-sentence_data = {"triples":{"subject": "Julia",
-                            "object": "medicine",
-                            "predicate": "hasPreference"}}
+sentence_data = None
 
-reasoner_response = {"type": "A",
-                    "data": "medicine"}
+reasoner_response = None
 
 def generate_response(sentence_data, reasoner_response):
-    sub = sentence_data["triples"]["subject"]
-    obj = sentence_data["triples"]["object"]
-    pred = sentence_data["triples"]["predicate"]
+    try:
+        name = sentence_data['patient_name']
+    except KeyError:
+        name = "Unknown patient"
 
     response_type = reasoner_response["type"]
     response_data = reasoner_response["data"]
 
     if response_type == "Q":
-        return f"{sub}, {response_data}?"
+        return f"{name}, {response_data}?"
     elif response_type == "A":
-        return f"{sub} has a preference for {response_data}"
+        return f"{name} has a preference for {response_data}"
     else:
         return "Invalid response."
 
@@ -33,7 +31,7 @@ def check_responses():
     global reasoner_response, sentence_data
     if reasoner_response and sentence_data:
         print("Got both sentence and reasoning, sending reply...", flush=True)
-        reply = generate_response(reasoner_response, sentence_data)
+        reply = generate_response(sentence_data, reasoner_response)
         reasoner_response = None
         sentence_data = None
         payload = {"reply": reply}
