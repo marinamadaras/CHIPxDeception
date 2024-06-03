@@ -18,7 +18,8 @@ def reason_advice() -> dict | None:
 
 
 #missing connection to correct repository
-#Query a list of recommended activities, sorted by values
+#query a list of recommended activities, sorted by values
+#name is still missing a source of some kind
 def recommended_activities_sorted(graph, name):
 
 
