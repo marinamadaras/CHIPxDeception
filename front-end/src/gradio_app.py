@@ -8,6 +8,11 @@ CUSTOM_PATH = "/gradio"
 
 app = FastAPI()
 
+# For now used to wait for a response
+# Will be set by the response generator via the /response route
+resp = None
+
+
 def init_repository() -> None:
     """
     Initializes the knowledge repository.
@@ -62,11 +67,6 @@ def ping(name: str):
     r = requests.get(f'http://{name}:5000/')
     return r.text
 
-# For now used to wait for a response
-# Will be set by the response generator via the /response route
-resp = None
-
-
 # I suspect that gradio only sends the sentence text to the method
 # So for all intents and purposes we can just generate a timestamp
 # And fix the patient's name. If we can somehow store the patient's
@@ -92,6 +92,7 @@ def send_to_t2t(chat_message):
             resp = None
             break
 
+    print("Returning reply:", resp)
     return reply
 
 
