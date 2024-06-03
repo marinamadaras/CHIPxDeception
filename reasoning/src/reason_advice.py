@@ -18,57 +18,60 @@ def reason_advice() -> dict | None:
 
 
 #missing connection to correct repository
-#query a list of recommended activities, sorted by values
-#name is still missing a source of some kind
-def recommended_activities_sorted(graph, name):
-
-
-    sparql = """
-      PREFIX owl: 
-      PREFIX rdf: 
-      PREFIX rdfs: 
-      PREFIX : 
-
-      SELECT ?patient ?value (COUNT(?secondaryValue) AS ?nSecondaryValues)
-      ?recommendedActivity WHERE {
+#Query a list of recommended activities, sorted by values
+def recommended_activities_sorted(db_connection, name):
+    
+    query = f"""
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX : <http://example.org/ontology#>
+    SELECT ?patient ?value (COUNT(?secondaryValue) AS ?nSecondaryValues) ?recommendedActivity WHERE {{
         ?patient a :Patient .
-
-        OPTIONAL {?patient :hasValue ?valueInd .
-                  ?valueInd a ?value .
-                  ?value rdfs:subClassOf :Value .}
-
-        OPTIONAL {?valueInd :prioritizedOver ?secondaryValueInd .
-                  ?secondaryValueInd a ?secondaryValue .
-                  ?secondaryValue rdfs:subClassOf :Value .}
-
-        OPTIONAL {?valueInd :relevantActivity ?recommendedActivity .}
-
+        OPTIONAL {{
+            ?patient :hasValue ?valueInd .
+            ?valueInd a ?value .
+            ?value rdfs:subClassOf :Value .
+        }}
+        OPTIONAL {{
+            ?valueInd :prioritizedOver ?secondaryValueInd .
+            ?secondaryValueInd a ?secondaryValue .
+            ?secondaryValue rdfs:subClassOf :Value .
+        }}
+        OPTIONAL {{
+            ?valueInd :relevantActivity ?recommendedActivity .
+        }}
         ?patient :hasRecommendedActivity ?recommendedActivity .
-        MINUS {OPTIONAL {?patient :hasPhysicalActivityHabit ?recommendedActivity .}}
-
+        MINUS {{
+            ?patient :hasPhysicalActivityHabit ?recommendedActivity .
+        }}
+        ?patient :hasName ?name .
         FILTER(?value != :Value)
         FILTER(!bound(?secondaryValue) || ?secondaryValue != :Value)
-      }
-      GROUP BY ?patient ?value ?nSecondaryValues ?recommendedActivity
-      ORDER BY DESC(?nSecondaryValues)
-      """
-
-#TODO MAKE THIS CONNECTION WORK, should work in connection with repository
-
-    n = name.replace("userKG:", "")
-    uri = URIRef("http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#" + n)
-    res = graph.query(sparql, initBindings={'patient': uri})
-
-    res = list(res)
-    res = [(c1.n3(graph.namespace_manager), c2.n3(graph.namespace_manager),
-            c3.n3(graph.namespace_manager), c4.n3(graph.namespace_manager)) for c1, c2, c3, c4 in res]
-    df = pd.DataFrame(res, columns=["Patient", "Value",
-                                    "NumberOfSecondaryValues", "RcommendedActivity"])
-    return df.drop_duplicates("RcommendedActivity").drop(["NumberOfSecondaryValues",
-                                                          "Value"],
-                                                         axis=1)
-
-
+        FILTER(str(?name) = "{name}")
+    }}
+    GROUP BY ?patient ?value ?nSecondaryValues ?recommendedActivity
+    ORDER BY DESC(?nSecondaryValues)
+    """
+    
+    db_connection.setQuery(query)
+    db_connection.setReturnFormat(JSON)
+    db_connection.addParameter('Accept', 'application/sparql-results+json')
+    
+    try:
+        response = db_connection.query().convert()
+        results = response['results']['bindings']
+        res = []
+        for result in results:
+            patient = result['patient']['value']
+            value = result.get('value', {}).get('value', '')
+            n_secondary_values = result['nSecondaryValues']['value']
+            recommended_activity = result['recommendedActivity']['value']
+            res.append((patient, value, n_secondary_values, recommended_activity))
+        df = pd.DataFrame(res, columns=["Patient", "Value", "NumberOfSecondaryValues", "RecommendedActivity"])
+        df = df.drop_duplicates("RecommendedActivity").drop(["NumberOfSecondaryValues", "Value"], axis=1)
+        
+        return df
 
 
 
@@ -79,7 +82,8 @@ def rule_based_advice(repository: str, db_connection) -> dict | None:
     """
 
     #get the sorted list for the current user (I just put in John for now)
-    recommended_activities=  recommended_activities_sorted(db_connection, John):
+    recommended_activities=  recommended_activities_sorted(db_connection, John)
 
     # return the most preferred recommended activity
     return recommended_activities[0]
+
