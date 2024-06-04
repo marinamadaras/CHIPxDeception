@@ -19,7 +19,7 @@ def query_knowledge():
     pass
 
 # Function to convert a JSON triple to RDF format
-def json_triple_to_rdf(json_data):
+def json_triple_to_rdf(triples):
     # Define namespaces
     ex = Namespace("http://example.org/ontology#")
     data = Namespace("http://example.org/data#")
@@ -75,28 +75,30 @@ def upload_rdf_data(repository_url, repository_name, rdf_data, content_type='app
 @app.route('/store-knowledge', methods=['POST'])
 def store_knowledge():
     # Get JSON data from the POST request
+    print(f"Triples received: {request.json}", flush=True)
     json_data = request.json
     
-    # Convert JSON triple to RDF data
-    rdf_data = json_triple_to_rdf(json_data)
-    
-    repository_url = "http://localhost:7500"  # Update as needed
-    repository_name = "userKG_repo"  # Update as needed
-    
-    # Upload RDF data to GraphDB
-    response = upload_rdf_data(repository_url, repository_name, rdf_data)
-    if response.status_code == 204:
-        return jsonify({"message": "Data uploaded successfully!"}), 200
+    triples = json_data['triples']
+    if len(triples) > 0:
+        # Convert JSON triple to RDF data
+        rdf_data = json_triple_to_rdf(json_data)
+        
+        repository_url = "http://localhost:7500"  # Update as needed
+        repository_name = "userKG_repo"  # Update as needed
+        
+        # Upload RDF data to GraphDB
+        response = upload_rdf_data(repository_url, repository_name, rdf_data)
+        if response.status_code == 204:
+            result = jsonify({"message": "Data uploaded successfully!"}), 200
+        else:
+            result = jsonify({"error": f"Failed to upload data: {response.status_code}, {response.text}"}), 500
     else:
-        return jsonify({"error": f"Failed to upload data: {response.status_code}, {response.text}"}), 500
-
-
-    print(f"Triples received: {request.json}", flush=True)
+        result = ({"message": "Empty triple set received"}), 200
 
     # IF DONE, START REASONING (should query knowledge base somehow)
     reason_and_notify_response_generator()
 
-    return 'OK'
+    return result
 
 
 # Note that we first check if we can give advice, and if that is "None",
