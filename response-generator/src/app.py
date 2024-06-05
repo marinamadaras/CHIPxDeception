@@ -10,19 +10,46 @@ sentence_data = None
 
 reasoner_response = None
 
+GREETINGS = (
+    "Hi",
+    "Hello",
+    "Yo"
+)
+
+def formulate_question(query: str) -> str:
+    """
+    Formulates a natural language question based on which facts are missing from the DB.
+    """
+    if 'prioritizedOver' in query:
+        return "how do you prioritize your values"
+    elif 'hasPhysicalActivityHabit' in query:
+        return "what physical activities do you regularly do"
+    raise ValueError(f"Cannot formulate question for query {query}")
+
+def formulate_advice(activity: str) -> str:
+    prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
+    activity = activity.replace(prefix, "")
+    activity = activity.replace("_", " ")
+    return activity
+
 def generate_response(sentence_data, reasoner_response):
     try:
         name = sentence_data['patient_name']
     except KeyError:
         name = "Unknown patient"
-
+    print(sentence_data, flush=True)
     response_type = reasoner_response["type"]
     response_data = reasoner_response["data"]
 
+    if sentence_data['sentence'] in GREETINGS:
+        return f"Hi, {name}"
+
     if response_type == "Q":
-        return f"{name}, {response_data}?"
+        question = formulate_question(response_data['data'])
+        return f"{name}, {question}?"
     elif response_type == "A":
-        return f"{name} has a preference for {response_data}"
+        activity = formulate_advice(response_data['data'][1])
+        return f"How about '{activity}', {name}?"
     else:
         return "Invalid response."
 
@@ -35,6 +62,7 @@ def check_responses():
         reasoner_response = None
         sentence_data = None
         payload = {"reply": reply}
+        print("response", payload, flush=True)
         requests.post("http://front-end:8000/response", json=payload)
 
 
