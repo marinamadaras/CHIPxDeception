@@ -1,7 +1,5 @@
 from flask import Flask, request
 import requests
-import json
-from dataclasses import dataclass
 
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -35,35 +33,62 @@ def infer_triples(patient_name, sentence):
     # Do something to infer triples here...
     # For now, a hard-coded response
     return [
-        create_triple("Julia", "hasValue", "Family"),
-        create_triple("Julia", "hasPreference", "NoMedication")
+        create_triple("John", "hasValue", "Family"),
+        create_triple("John", "hasPreference", "NoMedication")
     ]
+
+def postprocess_triple(triple, userID):
+    subject, predicate, object = triple['subject'], triple['predicate'], triple['object']
+    if subject == 'relationships':
+        subject = 'warm_relationships'
+    if object == 'relationships':
+        object = 'warm_relationships'
+
+    if predicate == "prioritize":
+        predicate = "prioritizedOver"
+        subject = f"{userID}_{subject}"
+        object = f"{userID}_{object}"
+    
+    if subject == "habit" and predicate == "have":
+        subject = userID
+        predicate = "hasPhysicalActivityHabit"
+        object = f"activity_{object}"
+
+    return {
+        'subject': subject,
+        'predicate': predicate,
+        'object': object,
+    }
 
 def extract_triples(patient_name, sentence):
     triples = []
     tokens = word_tokenize(sentence)
     tagged_tokens = pos_tag(tokens)
-
-    subject = patient_name  
+    
     predicate = None
     object_ = None
+    subject= None
+    print('tagged tokens:', tagged_tokens, flush=True)
     for word, tag in tagged_tokens:
         if tag.startswith('VB') and predicate is None:
             predicate = word
-        elif tag.startswith(('NN', 'NNS', 'NNP', 'NNPS')) and predicate and subject and object_ is None:
-            object_ = word
-            break
-
+        elif tag.startswith(('NN', 'NNS', 'NNP', 'NNPS')) and predicate:
+            if subject:
+                object_ = word
+            else:
+                subject = word
+    if subject is None:
+        subject = patient_name
     if subject and predicate and object_:
         triple_dict = {"subject": subject, "object": object_, "predicate": predicate}
-        triples.append(triple_dict)
+        triples.append(postprocess_triple(triple_dict, patient_name))
 
     return {"triples": triples}
 
 def send_triples(patient_name, sentence):
     payload = extract_triples(patient_name, sentence)
+    print(payload, flush=True)
     requests.post("http://reasoning:5000/store-knowledge", json=payload)
-    print(payload)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

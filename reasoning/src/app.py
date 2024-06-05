@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import requests
-import json
 from reason_advice import reason_advice
 from reason_question import reason_question
 from rdflib import Graph, Namespace, URIRef, Literal
@@ -21,26 +20,25 @@ def query_knowledge():
 # Function to convert a JSON triple to RDF format
 def json_triple_to_rdf(triples):
     # Define namespaces
-    ex = Namespace("http://example.org/ontology#")
-    data = Namespace("http://example.org/data#")
+    user_kg = Namespace("http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#")
 
     # Create an RDF graph
     g = Graph()
-    g.bind("ex", ex)
-    g.bind("data", data)
+    g.bind("userKG", user_kg)
 
     # Extract subject, predicate, and object from the JSON data
-    subject = json_data.get("subject")
-    predicate = json_data.get("predicate")
-    obj = json_data.get("object")
+    subject = triples.get("subject")
+    predicate = triples.get("predicate")
+    obj = triples.get("object")
+    print("triple:", subject, predicate, obj, flush=True)
 
     # Construct subject, predicate, and object URIs
-    subject_uri = data[URIRef(subject.replace(" ", ""))]
-    predicate_uri = ex[URIRef(predicate)]
+    subject_uri = user_kg[URIRef(subject.replace(" ", ""))]
+    predicate_uri = user_kg[URIRef(predicate)]
     if isinstance(obj, (int, float)):
         object_uri = Literal(obj)
     else:
-        object_uri = data[URIRef(obj.replace(" ", ""))]
+        object_uri = user_kg[URIRef(obj.replace(" ", ""))]
 
     # Add the triple to the graph
     g.add((subject_uri, predicate_uri, object_uri))
@@ -80,11 +78,14 @@ def store_knowledge():
     
     triples = json_data['triples']
     if len(triples) > 0:
+        print('triples', triples, flush=True)
+        triple = triples[0]
         # Convert JSON triple to RDF data
-        rdf_data = json_triple_to_rdf(json_data)
+        rdf_data = json_triple_to_rdf(triple)
+        print("rdf_data:", rdf_data, flush=True)
         
-        repository_url = "http://localhost:7500"  # Update as needed
-        repository_name = "userKG_repo"  # Update as needed
+        repository_url = "http://knowledge:7200"  # Update as needed
+        repository_name = "repo-test-1"  # Update as needed
         
         # Upload RDF data to GraphDB
         response = upload_rdf_data(repository_url, repository_name, rdf_data)
@@ -102,15 +103,19 @@ def store_knowledge():
 
 
 # Note that we first check if we can give advice, and if that is "None",
-# then we try to formulate a question instead. 
+# then we try to formulate a question instead.
+@app.route('/reason')
 def reason_and_notify_response_generator():
     response = reason_advice()
+    print("advice response:", response, flush=True)
     reason_type = "A"
-    if (not response):
+    if (not response or not response['data']):
+        print("Could not give advice, asking question instead", flush=True)
         reason_type = "Q"
         response = reason_question()
 
     # SEND REASONING RESULT
+    print("reasoning result: ", response, flush=True)
     payload = {"type": reason_type, "data": response}
     requests.post("http://response-generator:5000/submit-reasoner-response", json=payload)
 

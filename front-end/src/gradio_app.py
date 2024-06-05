@@ -28,7 +28,7 @@ def load_kg(repository: str) -> None:
     Loads initial knowledge graph into `repository_name`.
     Returns `None` if successfull and raises a ValueError otherwise.
     """
-    data_path = '/data/data.rdf'
+    data_path = '/data/userKG_inferred_stripped.rdf'
     with open(data_path, 'rb') as rdf_file:
         statements = rdf_file.read()
     result = requests.post(
@@ -67,13 +67,18 @@ def ping(name: str):
     r = requests.get(f'http://{name}:5000/')
     return r.text
 
+@app.get('/ping/{name}/{endpoint}')
+def ping_endpoint(name: str, endpoint: str):
+    r = requests.get(f'http://{name}:5000/{endpoint}')
+    return r.text
+
 # I suspect that gradio only sends the sentence text to the method
 # So for all intents and purposes we can just generate a timestamp
 # And fix the patient's name. If we can somehow store the patient's
 # name, then we should use that of course.
 def send_to_t2t(chat_message):
     payload = {
-        "patient_name": "Julia",
+        "patient_name": "John",
         "sentence": chat_message,
         "timestamp": datetime.datetime.now().isoformat()
     }
@@ -89,6 +94,7 @@ def send_to_t2t(chat_message):
         time.sleep(0.2)
         if resp is not None:
             reply = resp
+            print(reply, flush=True)
             resp = None
             break
 

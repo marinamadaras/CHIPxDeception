@@ -11,19 +11,22 @@ def get_db_connection(address):
 # Return "None" if no question could be formulated (can this even happen?)
 def reason_question() -> dict | None:
     repository_name = 'repo-test-1'
-    db_connection = get_db_connection(f"http://localhost:7200/repositories/{repository}")
-    username = "Patient56"
-    return {"data": rule_based_question(repository_name, db_connection)}
+    db_connection = get_db_connection(f"http://knowledge:7200/repositories/{repository_name}")
+    userID = "John"
+    return {"data": rule_based_question(repository_name, userID, db_connection)}
 
 # TODO FdH: read required facts from external file in suitable format (ttl?)
 # TODO FdH: make specific to data required for reasoning
 def get_required_facts(userID:str) -> list:
     return [
-        f"userKG:{userID} userKG:hasEmploymentStatus ?o",
-        f"userKG:{userID} userKG:hasIncome ?o",
-        f"userKG:{userID} userKG:hasPerceivedStress ?o",
-        f"userKG:{userID} userKG:hasSleepPattern ?o",
         f"userKG:{userID} userKG:hasValue ?o",
+        f"""
+        userKG:{userID} userKG:hasValue ?o1.
+        userKG:{userID} userKG:hasValue ?o2
+        FILTER(?o1 != ?o2).
+        ?o1 userKG:prioritizedOver ?o2  
+        """,
+        f"userKG:{userID} userKG:hasPhysicalActivityHabit ?o",
     ]
 
 # TODO FdH: use suitable data formats for facts and db_connection
