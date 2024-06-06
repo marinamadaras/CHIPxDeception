@@ -16,21 +16,29 @@ Some things are not known yet about John, such as which values he values more or
 
 # Dialogue
 Here is an example dialogue:
+
 User: Hi
+
 System: Hi, John
 
 User: What do you recommend?
-System: John, how do you prioritize your values?
+
+System: John, that depends on what you find important. What do you prioritize?
 
 User: I prioritize security over work
-System: How about 'activity balance', John?
+
+System: How about the activity 'balance exercises', John?
+
 (Explanation: security relates to feeling comfortable and is associated with activities that can be done at home, such as balance activities done alone at home.)
 
 User: I prioritize family over security
-System: How about 'activity cycling', John?
+
+System: How about the activity 'cycling', John?
+
 (Explanation: the system infers that John should go cycling, as this can be done with family)
 
 User: Thanks
+
 System: Goodbye
 
 
