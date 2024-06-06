@@ -7506,7 +7506,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -7663,7 +7663,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#John_security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -7748,7 +7748,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -7797,7 +7797,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_running"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -8137,7 +8137,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient10_FunAndEnjoyment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient10_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient10_SenseOfBelonging"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -8387,7 +8387,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient11_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -8557,7 +8557,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -8703,7 +8703,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient12_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -8903,7 +8903,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -9163,7 +9163,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient14_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -9354,11 +9354,11 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_measure_BMI_20241229"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_measure_WaistCircumference_20201130"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -9446,7 +9446,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_SenseOfAccomplishment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient15_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -9859,7 +9859,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -10032,7 +10032,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -10191,7 +10191,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -10483,7 +10483,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -10543,7 +10543,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -10700,7 +10700,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient20_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient20_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient20_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -10888,7 +10888,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -11165,7 +11165,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -11328,7 +11328,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -11516,10 +11516,10 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient24_measure_BMI_2020521"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient24_measure_WaistCircumference_2021419"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient24_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -11942,7 +11942,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -12098,7 +12098,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient26_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient26_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient26_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -12286,7 +12286,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_yoga"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -12520,7 +12520,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_measure_BMI_2020814"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_measure_WaistCircumference_2020525"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
@@ -12612,7 +12612,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient28_SenseOfBelonging"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -12749,7 +12749,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -12811,7 +12811,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient29_BeingWellRespected"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient29_SelfFulfillment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -12985,7 +12985,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient2_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient2_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient2_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -13180,7 +13180,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -13230,7 +13230,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -13701,7 +13701,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -13917,7 +13917,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -14026,7 +14026,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient33_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -14292,7 +14292,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient34_Family"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient34_Friends"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient34_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -14414,7 +14414,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -14789,7 +14789,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_yoga"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -15051,7 +15051,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient38_Excitement"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient38_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient38_SelfRespect"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -15203,7 +15203,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -15289,7 +15289,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient39_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient39_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -15559,7 +15559,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -15614,7 +15614,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_yoga"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -15732,7 +15732,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient40_Friends"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient40_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient40_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -15866,7 +15866,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -15929,7 +15929,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient41_BeingWellRespected"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient41_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient41_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -16069,7 +16069,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -16345,7 +16345,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -16631,7 +16631,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient44_FunAndEnjoyment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient44_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient44_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -16802,7 +16802,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient45_Excitement"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient45_Family"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -16898,7 +16898,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -16999,7 +16999,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient46_FunAndEnjoyment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient46_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient46_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -17117,7 +17117,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient47_measure_BMI_2022715"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient47_measure_WaistCircumference_2020228"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient47_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
@@ -17177,7 +17177,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient47_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -17287,7 +17287,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -17486,7 +17486,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -17605,7 +17605,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient49_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -18002,7 +18002,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -18184,10 +18184,10 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient51_measure_BMI_202333"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient51_measure_WaistCircumference_20231124"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient51_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -18476,7 +18476,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -18642,7 +18642,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -18771,7 +18771,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient53_FunAndEnjoyment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient53_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient53_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -18961,11 +18961,11 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient54_measure_BMI_202162"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient54_measure_WaistCircumference_2021427"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient54_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -19065,7 +19065,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient54_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient54_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -19317,7 +19317,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient55_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient55_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient55_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -19497,7 +19497,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_weightlifting"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -19645,7 +19645,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient56_BeingWellRespected"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient56_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient56_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -19800,7 +19800,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -19934,7 +19934,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient57_Friends"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient57_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient57_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -20097,7 +20097,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -20348,7 +20348,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient59_measure_BMI_2020620"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient59_measure_WaistCircumference_20231126"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient59_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
@@ -20566,7 +20566,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient5_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient5_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -20773,7 +20773,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -20832,7 +20832,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient60_Excitement"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient60_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient60_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -20951,7 +20951,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -21016,7 +21016,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient61_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient61_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -21144,11 +21144,11 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_measure_BMI_2023129"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_measure_WaistCircumference_2023323"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -21252,7 +21252,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_Family"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient62_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -21380,7 +21380,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -21541,7 +21541,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -21798,7 +21798,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -21933,7 +21933,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient65_Excitement"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient65_Family"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -22251,7 +22251,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_running"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -22376,7 +22376,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient67_SenseOfAccomplishment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient67_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient67_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -22571,7 +22571,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -22697,7 +22697,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient68_Family"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient68_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient68_SenseOfBelonging"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -22891,7 +22891,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -23020,7 +23020,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient69_SenseOfAccomplishment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient69_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient69_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -23416,7 +23416,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -23581,7 +23581,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -23664,7 +23664,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient71_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -23977,7 +23977,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -24073,7 +24073,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient73_FunAndEnjoyment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -24221,11 +24221,11 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient74_measure_BMI_2021430"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient74_measure_WaistCircumference_2023731"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient74_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -24324,7 +24324,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient74_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -24475,7 +24475,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -24623,7 +24623,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient75_FunAndEnjoyment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient75_SenseOfAccomplishment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -24909,7 +24909,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient76_SelfRespect"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -25058,7 +25058,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -25198,7 +25198,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient77_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient77_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient77_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -25358,7 +25358,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -25505,7 +25505,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient78_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient78_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient78_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -25699,11 +25699,11 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient79_measure_BMI_2023328"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient79_measure_WaistCircumference_2022814"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient79_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -25831,7 +25831,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient79_Friends"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -26017,7 +26017,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient7_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient7_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient7_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -26185,7 +26185,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_measure_BMI_2022717"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_measure_WaistCircumference_2023817"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasSleepPattern rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_sleep_pattern"/>
         <userKG:hasSmokingHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_smoking_habit"/>
         <userKG:hasValue rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_BeingWellRespected"/>
@@ -26417,7 +26417,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -26590,7 +26590,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_measure_BMI_202422"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_measure_WaistCircumference_202388"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
@@ -26734,7 +26734,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient82_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -26905,7 +26905,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -27066,7 +27066,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -27286,7 +27286,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -27440,7 +27440,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -27499,7 +27499,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient86_BeingWellRespected"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -27602,7 +27602,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -27731,7 +27731,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient87_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient87_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient87_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -27947,7 +27947,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient88_Friends"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient88_SenseOfAccomplishment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient88_SenseOfBelonging"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -28066,7 +28066,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -28196,7 +28196,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient89_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient89_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient89_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -28405,7 +28405,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient8_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -28589,7 +28589,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -28644,7 +28644,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -28726,7 +28726,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient90_FunAndEnjoyment"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -29087,7 +29087,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -29238,7 +29238,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient92_Excitement"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient92_SenseOfAccomplishment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient92_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -29411,7 +29411,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -29513,7 +29513,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient93_SelfFulfillment"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient93_WarmRelationships"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient93_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -29787,7 +29787,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient95_measure_BMI_2022228"/>
         <userKG:hasMedicalMeasurement rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient95_measure_WaistCircumference_20211222"/>
         <userKG:hasPerceivedStress rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient95_perceived_stress"/>
-        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_walking"/>
@@ -29934,7 +29934,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasPhysicalActivityHabit rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -30035,7 +30035,7 @@ Patients who do not experience stress.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient96_Security">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -30205,7 +30205,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -30322,7 +30322,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient97_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient97_SenseOfBelonging"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient97_WarmRelationships"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -30503,7 +30503,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -30659,7 +30659,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient98_SelfRespect"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient98_Work"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -30851,7 +30851,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_change_diet"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_increase_activity"/>
         <userKG:hasRecommendation rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#recommendation_reduce_stress"/>
-        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:hasRecommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
@@ -31138,7 +31138,7 @@ Patients who do not experience stress.</rdfs:comment>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Security"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Value"/>
         <userKG:prioritizedOver rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient9_SelfRespect"/>
-        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_pilates"/>
         <userKG:relevantActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_stretching"/>
@@ -31237,9 +31237,9 @@ Patients who do not experience stress.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance -->
+    <!-- http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises">
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#BalanceExercise"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#FlexibilityAndBalance"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#GymActivity"/>
@@ -31961,7 +31961,7 @@ Patients who do not experience stress.</rdfs:comment>
         <userKG:isSuitableFor rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient97"/>
         <userKG:isSuitableFor rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient98"/>
         <userKG:isSuitableFor rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#Patient99"/>
-        <userKG:recommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance"/>
+        <userKG:recommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_balance_exercises"/>
         <userKG:recommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_bodyweight"/>
         <userKG:recommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_cycling"/>
         <userKG:recommendedActivity rdf:resource="http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#activity_dancing"/>
