@@ -21,7 +21,7 @@ def formulate_question(query: str) -> str:
     Formulates a natural language question based on which facts are missing from the DB.
     """
     if 'prioritizedOver' in query:
-        return "how do you prioritize your values"
+        return "that depends on what you find important. What do you prioritize?"
     elif 'hasPhysicalActivityHabit' in query:
         return "what physical activities do you regularly do"
     raise ValueError(f"Cannot formulate question for query {query}")
@@ -29,6 +29,7 @@ def formulate_question(query: str) -> str:
 def formulate_advice(activity: str) -> str:
     prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
     activity = activity.replace(prefix, "")
+
     activity = activity.replace("_", " ")
     return activity
 
@@ -49,7 +50,7 @@ def generate_response(sentence_data, reasoner_response):
         return f"{name}, {question}?"
     elif response_type == "A":
         activity = formulate_advice(response_data['data'][1])
-        return f"How about '{activity}', {name}?"
+        return f"How about the activity '{activity}', {name}?"
     else:
         return "Invalid response."
 
