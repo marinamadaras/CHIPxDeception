@@ -26,9 +26,23 @@ def formulate_question(query: str) -> str:
         return "what physical activities do you regularly do"
     raise ValueError(f"Cannot formulate question for query {query}")
 
+# =============================================================================
+# def formulate_advice(activity: str) -> str:
+#     prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
+#     activity = activity.replace(prefix, "")
+# 
+#     activity = activity.replace("_", " ")
+#     return activity
+# =============================================================================
+
 def formulate_advice(activity: str) -> str:
     prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
     activity = activity.replace(prefix, "")
+
+    # Split activity on underscore and take the last part if it starts with "activity"
+    parts = activity.split("_")
+    if parts[0] == "activity":
+        activity = "_".join(parts[1:])
 
     activity = activity.replace("_", " ")
     return activity
