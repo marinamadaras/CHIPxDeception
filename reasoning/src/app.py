@@ -67,6 +67,11 @@ def upload_rdf_data(repository_url, repository_name, rdf_data, content_type='app
 
     # Send a POST request to upload the RDF data
     response = requests.post(endpoint, data=rdf_data, headers=headers)
+    
+    if not response.ok:
+        app.logger.error('Failed to upload RDF data: %s, Response: %s', response.status_code, response.text)
+    else:
+        app.logger.info('Successfully uploaded RDF data.')
 
     return response
 
