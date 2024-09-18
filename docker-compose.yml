@@ -57,11 +57,12 @@ services:
     build: ./logger/.
     expose:
     - 5000
+    ports: ["8010:5000"]
     networks:
     - docker_network
-    volumes:
-    - ./logger/app:/app
-  
+    # volumes:
+    # - ./logger/app:/app
+
 networks:
   docker_network:
     driver: bridge

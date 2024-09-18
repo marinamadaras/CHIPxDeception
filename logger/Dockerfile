@@ -7,5 +7,7 @@ RUN pip3 install -r /requirements.txt
 # Copy over source
 COPY app /app
 
+RUN mkdir /logs
+
 # Run the server
 CMD [ "flask", "--app", "app", "--debug", "run", "--host", "0.0.0.0"]

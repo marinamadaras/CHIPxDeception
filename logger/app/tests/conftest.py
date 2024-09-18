@@ -7,7 +7,6 @@ from logging import FileHandler
 
 @pytest.fixture(scope='function')
 def app():
-    print("BEEP")
     app = create_app(test=True)
     app.config.update({
         "TESTING": True,
