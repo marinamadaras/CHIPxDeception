@@ -60,8 +60,9 @@ services:
     ports: ["8010:5000"]
     networks:
     - docker_network
-    # volumes:
-    # - ./logger/app:/app
+    volumes:
+    - ./logger/app:/app
+    - ./logger/logs:/logs
 
 networks:
   docker_network:
