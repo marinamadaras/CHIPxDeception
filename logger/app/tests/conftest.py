@@ -1,19 +1,27 @@
 import pytest
+import logging
 from app import create_app
+from pathlib import Path
+from logging import FileHandler
 
 
-@pytest.fixture()
+@pytest.fixture(scope='function')
 def app():
-    app = create_app()
+    print("BEEP")
+    app = create_app(test=True)
     app.config.update({
         "TESTING": True,
     })
 
-    # other setup can go here
+    app.logger.setLevel(logging.INFO)  # Needed to ensure that logging can be tested in pytest.
 
     yield app
 
     # clean up / reset resources here
+    for handler in app.logger.handlers:
+        if isinstance(handler, FileHandler) and 'chip' in handler.baseFilename:
+            handler.close()
+            Path(handler.baseFilename).unlink()
 
 
 @pytest.fixture()
