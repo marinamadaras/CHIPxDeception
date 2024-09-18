@@ -234,3 +234,5 @@ fabric.properties
 # Gradio flagged dir
 front-end/src/flagged
 
+*.sublime-project
+*.sublime-workspace
