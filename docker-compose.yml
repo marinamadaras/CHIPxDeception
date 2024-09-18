@@ -60,7 +60,7 @@ services:
     networks:
     - docker_network
     volumes:
-    - ./logger/src:/src
+    - ./logger/app:/app
   
 networks:
   docker_network:
