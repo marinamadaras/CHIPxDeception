@@ -45,5 +45,5 @@ jobs:
     - name: Coverage
       uses: orgoro/coverage@v3.1
       with:
-        coverageFile: ./coverage.xml
+        coverageFile: ./logger/coverage.xml
         token: ${{ secrets.GITHUB_TOKEN }}
