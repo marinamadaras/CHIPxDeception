@@ -5,7 +5,7 @@ from pathlib import Path
 from logging import FileHandler
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture()
 def app():
     app = create_app(test=True)
     app.config.update({
