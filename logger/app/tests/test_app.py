@@ -18,7 +18,8 @@ def test_log_post(client):
     logged_line = b'blabla'
     response = client.post(f"/log", data={
         "msg": logged_line,
-        "service_name": "service"
+        "service_name": "service",
+        "levelno": 0
     })
 
     assert logged_line in response.data
