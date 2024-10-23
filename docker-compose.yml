@@ -1,69 +1,71 @@
+x-service-defaults: &service_defaults
+  env_file: config.env
+  networks: dockernetwork
+  expose: 
+  - 5000
+
 services:
   knowledge:
+    << : *service_defaults
     build: ./knowledge/.
     expose:
     - 7200
     ports: ["7200:7200"]
     networks:
-    - docker_network
+    - dockernetwork
 
   # Johanna + Shihan + Selene + Pei-Yu + Floris
   # - Question Reasoning (rule-based): Floris 
   # - Advice Reasoning: Johanna
   reasoning:
+    << : *service_defaults
     build: ./reasoning/.
-    expose:
-    - 5000
     networks:
-    - docker_network
+    - dockernetwork
     volumes:
     - ./reasoning/src:/src
     - ./reasoning/data:/data
 
   # Cristina + Floris
   response-generator:
+    << : *service_defaults
     build: ./response-generator/.
-    expose:
-    - 5000
     networks:
-    - docker_network
+    - dockernetwork
     volumes:
-    - ./response-generator/src:/src
+    - ./response-generator/app:/app
   
   # Stergios + Selene/Floris
   text-to-triples:
+    << : *service_defaults
     build: ./text-to-triples/.
-    expose:
-    - 5000
     networks:
-    - docker_network
+    - dockernetwork
     volumes:
     - ./text-to-triples/src:/src
   
   # Quirine
   front-end:
+    << : *service_defaults
     build: ./front-end/.
-    expose:
-    - 8000
     ports: ["8000:8000"]
     networks:
-    - docker_network
+    - dockernetwork
     volumes:
     - ./front-end/src:/src
     - ./front-end/data:/data
   
   # Shaad
   logger:
+    << : *service_defaults
     build: ./logger/.
-    expose:
-    - 5000
     ports: ["8010:5000"]
     networks:
-    - docker_network
+    - dockernetwork
     volumes:
     - ./logger/app:/app
     - ./logger/logs:/logs
 
 networks:
-  docker_network:
+  dockernetwork:
     driver: bridge

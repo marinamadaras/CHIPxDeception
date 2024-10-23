@@ -8,9 +8,6 @@ from logging import FileHandler
 @pytest.fixture()
 def app():
     app = create_app(test=True)
-    app.config.update({
-        "TESTING": True,
-    })
 
     app.logger.setLevel(logging.INFO)  # Needed to ensure that logging can be tested in pytest.
 
