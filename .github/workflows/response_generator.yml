@@ -40,7 +40,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        coverage run --branch -m pytest app/tests/t
+        coverage run --branch -m pytest app/tests/
         coverage xml --omit="app/tests/**"
     - name: Python Coverage
       uses: orgoro/coverage@v3.2
