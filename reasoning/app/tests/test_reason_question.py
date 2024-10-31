@@ -34,7 +34,8 @@ def test_rule_based_question_non_empty(application, test_name):
             patch('app.reason_question.get_missing_facts') as mis,  \
             patch('app.reason_question.sort_missing_facts') as srt:
 
-        srt.return_value = [0]
+        mock = MagicMock()
+        srt.return_value = [mock]
 
         mf = rule_based_question(test_name)
 
@@ -42,7 +43,7 @@ def test_rule_based_question_non_empty(application, test_name):
         mis.assert_called_once()
         srt.assert_called_once()
 
-        assert mf is 0
+        assert mf is mock
 
 
 def test_query_for_presence(application, get_db_connection):
