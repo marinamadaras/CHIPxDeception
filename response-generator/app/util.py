@@ -85,7 +85,4 @@ def check_responses():
         current_app.logger.debug(f"response: {payload}")
         front_end_address = os.environ.get("FRONTEND_ADDRESS", None)
         if front_end_address:
-            try:
-                requests.post(f"http://{front_end_address}/response", json=payload)
-            except Exception:
-                current_app.logger.error("Could not reach front-end, is it running at the expected address?")
+            requests.post(f"http://{front_end_address}/response", json=payload)
