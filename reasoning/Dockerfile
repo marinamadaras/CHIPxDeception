@@ -5,8 +5,7 @@ COPY requirements.txt /
 RUN pip3 install -r /requirements.txt
 
 # Copy over source
-COPY src /src
+COPY app /app
 
 # Run the server
-WORKDIR src
-CMD [ "python", "app.py" ]
+CMD [ "flask", "--app", "app", "--debug", "run", "--host", "0.0.0.0"]
