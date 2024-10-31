@@ -1,4 +1,6 @@
 from fastapi import FastAPI, Request
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 import gradio as gr
 import requests
 import datetime
@@ -13,6 +15,12 @@ app = FastAPI()
 resp = None
 
 
+# NOTE: This is great for debugging, but we shouldn't do this in production...
+@app.exception_handler(500)
+async def internal_exception_handler(request: Request, exc: Exception):
+    return JSONResponse(status_code=500, content=jsonable_encoder({"code": 500, "msg": repr(exc)}))
+
+
 def init_repository() -> None:
     """
     Initializes the knowledge repository.
@@ -22,6 +30,7 @@ def init_repository() -> None:
     result = requests.post(f'http://knowledge:7200/rest/repositories', files=files)
     if result.status_code not in range(200, 300):
         raise ValueError(f"There was potentially a problem with initializing the repository (status code {result.status_code}): {result.text}")
+
 
 def load_kg(repository: str) -> None:
     """

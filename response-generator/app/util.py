@@ -60,8 +60,8 @@ def generate_response(sentence_data, reasoner_response):
     except KeyError:
         name = "Unknown patient"
     current_app.logger.debug(f"sentence_data: {sentence_data}")
-    response_type = reasoner_response["type"]
-    response_data = ResponseType(reasoner_response["data"])
+    response_type = ResponseType(reasoner_response["type"])
+    response_data = reasoner_response["data"]
 
     if sentence_data['sentence'] in GREETINGS:
         return f"Hi, {name}"
@@ -85,7 +85,4 @@ def check_responses():
         current_app.logger.debug(f"response: {payload}")
         front_end_address = os.environ.get("FRONTEND_ADDRESS", None)
         if front_end_address:
-            try:
-                requests.post(f"http://{front_end_address}/response", json=payload)
-            except Exception:
-                current_app.logger.error("Could not reach front-end, is it running at the expected address?")
+            requests.post(f"http://{front_end_address}/response", json=payload)
