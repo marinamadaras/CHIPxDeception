@@ -60,8 +60,8 @@ def generate_response(sentence_data, reasoner_response):
     except KeyError:
         name = "Unknown patient"
     current_app.logger.debug(f"sentence_data: {sentence_data}")
-    response_type = reasoner_response["type"]
-    response_data = ResponseType(reasoner_response["data"])
+    response_type = ResponseType(reasoner_response["type"])
+    response_data = reasoner_response["data"]
 
     if sentence_data['sentence'] in GREETINGS:
         return f"Hi, {name}"
