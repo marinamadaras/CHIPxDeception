@@ -23,7 +23,7 @@ services:
     networks:
     - dockernetwork
     volumes:
-    - ./reasoning/src:/src
+    - ./reasoning/app:/app
     - ./reasoning/data:/data
 
   # Cristina + Floris
