@@ -56,8 +56,11 @@ def extract_triples(patient_name, sentence):
 
 
 def send_triples(patient_name, sentence):
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+
     payload = extract_triples(patient_name, sentence)
     current_app.logger.debug(f"payload: {payload}")
-    reasoning_address = os.environ['REASONING_ADDRESS']
+    reasoning_address = os.environ.get('REASONING_ADDRESS', None)
     if reasoning_address:
         requests.post(f"http://{reasoning_address}/store-knowledge", json=payload)
