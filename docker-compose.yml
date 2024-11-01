@@ -42,7 +42,7 @@ services:
     networks:
     - dockernetwork
     volumes:
-    - ./text-to-triples/src:/src
+    - ./text-to-triples/app:/app
   
   # Quirine
   front-end:
