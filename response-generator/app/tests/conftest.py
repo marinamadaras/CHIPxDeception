@@ -4,6 +4,11 @@ from unittest.mock import Mock
 from types import SimpleNamespace
 
 
+class AnyStringWith(str):
+    def __eq__(self, other):
+        return self in other
+
+
 @pytest.fixture()
 def util():
     import sys
