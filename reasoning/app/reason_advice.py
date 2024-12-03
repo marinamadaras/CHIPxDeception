@@ -6,7 +6,7 @@ import app.db
 
 # Should probably somehow talk to the knowledge graph and get info from there?
 # 'data' should be `None` if no advice could be formulated.
-def reason_advice(userID='John') -> dict:
+def reason_advice(userID: str) -> dict:
     return {'data': rule_based_advice(userID)}
 
 

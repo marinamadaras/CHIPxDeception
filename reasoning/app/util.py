@@ -71,14 +71,19 @@ def upload_rdf_data(rdf_data, content_type='application/x-turtle'):
 
 
 def reason():
-    response = reason_advice()
+    # TODO: Fix the naming inconsistency of the patient
+    #     - Use full name in front-end
+    #     - Distinguish between first and last name
+    #     - Let bot reply with first name
+    #     - Store nodes with full name in userKG - or don't use the name at all in the node's identifier
+    response = reason_advice("John Mitchel")
     current_app.logger.info(f"advice response: {response}")
 
     reason_type = 'A'
     if (not response or not response['data']):
         current_app.logger.info("Could not give advice, asking question instead")
         reason_type = 'Q'
-        response = reason_question()
+        response = reason_question("John")
 
     # SEND REASONING RESULT
     current_app.logger.info(f"reasoning result: {response}")
