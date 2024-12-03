@@ -1,6 +1,7 @@
 x-service-defaults: &service_defaults
   env_file: config.env
-  networks: dockernetwork
+  networks: 
+  - dockernetwork
   expose: 
   - 5000
 
@@ -11,8 +12,6 @@ services:
     expose:
     - 7200
     ports: ["7200:7200"]
-    networks:
-    - dockernetwork
 
   # Johanna + Shihan + Selene + Pei-Yu + Floris
   # - Question Reasoning (rule-based): Floris 
@@ -20,8 +19,6 @@ services:
   reasoning:
     << : *service_defaults
     build: ./reasoning/.
-    networks:
-    - dockernetwork
     volumes:
     - ./reasoning/app:/app
     - ./reasoning/data:/data
@@ -30,8 +27,6 @@ services:
   response-generator:
     << : *service_defaults
     build: ./response-generator/.
-    networks:
-    - dockernetwork
     volumes:
     - ./response-generator/app:/app
   
@@ -39,8 +34,6 @@ services:
   text-to-triples:
     << : *service_defaults
     build: ./text-to-triples/.
-    networks:
-    - dockernetwork
     volumes:
     - ./text-to-triples/app:/app
   
@@ -49,8 +42,6 @@ services:
     << : *service_defaults
     build: ./front-end/.
     ports: ["8000:8000"]
-    networks:
-    - dockernetwork
     volumes:
     - ./front-end/src:/src
     - ./front-end/data:/data
@@ -66,18 +57,16 @@ services:
     << : *service_defaults
     build: ./logger/.
     ports: ["8010:5000"]
-    networks:
-    - dockernetwork
     volumes:
     - ./logger/app:/app
     - ./logger/logs:/logs
-    # Otherwise we get double logging in the console.
+    # Otherwise we get double logging in the console. NOTE: for some reason not working...
     logging:
       driver: none
-
 
 networks:
   dockernetwork:
     driver: bridge
+
 volumes:
   redisdata:
