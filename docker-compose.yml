@@ -11,7 +11,9 @@ services:
     build: ./knowledge/.
     expose:
     - 7200
-    ports: ["7200:7200"]
+    entrypoint: 
+    - "/opt/graphdb/dist/bin/graphdb"
+    - "-Dgraphdb.external-url=http://localhost:9000/kgraph/"
 
   # Johanna + Shihan + Selene + Pei-Yu + Floris
   # - Question Reasoning (rule-based): Floris 
@@ -41,11 +43,22 @@ services:
   front-end:
     << : *service_defaults
     build: ./front-end/.
-    ports: ["8000:8000"]
+    ports: 
+    - "7000:8000"
     volumes:
     - ./front-end/src:/src
     - ./front-end/data:/data
   
+
+  quasar:
+    << : *service_defaults
+    build: ./quasar/.
+    ports: 
+    - "9000:9000"
+    volumes:
+    - ./quasar/backend:/backend
+    - ./quasar/frontend:/frontend
+
   redis:
     << : *service_defaults
     image: redis:latest
