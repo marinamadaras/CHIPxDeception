@@ -55,6 +55,12 @@ services:
     - ./front-end/src:/src
     - ./front-end/data:/data
   
+  redis:
+    << : *service_defaults
+    image: redis:latest
+    volumes:
+      - redisdata:/data
+
   # Shaad
   logger:
     << : *service_defaults
@@ -73,3 +79,5 @@ services:
 networks:
   dockernetwork:
     driver: bridge
+volumes:
+  redisdata:
