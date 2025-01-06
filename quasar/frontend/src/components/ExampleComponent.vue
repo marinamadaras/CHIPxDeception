@@ -60,12 +60,6 @@ const userStore = useUserStore();
 userStore.user = { name: 'John', human: true };
 const botUser = { name: 'Bot', human: false };
 
-messageStore.addMessage({ message: 'Hello', user: userStore.user });
-messageStore.addMessage({
-  message: `Hello, ${userStore.user?.name}`,
-  user: botUser,
-});
-
 const text = ref('');
 
 async function submit() {
