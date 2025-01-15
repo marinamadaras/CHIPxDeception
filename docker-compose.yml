@@ -12,8 +12,7 @@ services:
     expose:
     - 7200
     entrypoint: 
-    - "/opt/graphdb/dist/bin/graphdb"
-    - "-Dgraphdb.external-url=http://localhost:9000/kgraph/"
+    - "/entrypoint.sh"
 
   # Johanna + Shihan + Selene + Pei-Yu + Floris
   # - Question Reasoning (rule-based): Floris 
