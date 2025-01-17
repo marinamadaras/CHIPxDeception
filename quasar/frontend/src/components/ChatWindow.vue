@@ -1,15 +1,4 @@
 <template>
-  <!-- <div class="col fit"> -->
-  <!-- <p>{{ title }}</p>
-    <ul>
-      <li v-for="todo in todos" :key="todo.id" @click="increment">
-        {{ todo.id }} - {{ todo.content }}
-      </li>
-    </ul>
-    <p>Count: {{ todoCount }} / {{ meta.totalCount }}</p>
-    <p>Active: {{ active ? 'yes' : 'no' }}</p>
-    <p>Clicks on todos: {{ clickCount }}</p> -->
-
   <div
     class="col-11 q-pa-md"
     ref="messagesDiv"
@@ -40,15 +29,11 @@
       <q-btn round dense flat icon="send" @click="submit" />
     </template>
   </q-input>
-  <!-- </div> -->
-  <!-- <div style="background: red" class="col-8">dsgag</div>
-  <div style="background: green" class="col-4">dsgag</div> -->
 </template>
 
 <script setup lang="ts">
 import { ref, nextTick, onMounted, onUnmounted } from 'vue';
-// import type { ChatMessage } from './models';
-import { useMessageStore } from 'src/stores/example-store';
+import { useMessageStore } from 'src/stores/message-store';
 import { useUserStore } from 'src/stores/user-store';
 
 const emit = defineEmits(['reloadVisualization']);
@@ -64,7 +49,8 @@ const text = ref('');
 
 async function submit() {
   if (text.value) {
-    messageStore.addMessage({ message: text.value, user: userStore.user });
+    var timestamp = new Date().toISOString();
+    messageStore.addMessage({ message: text.value, user: userStore.user, timestamp: timestamp });
 
     // Send message to backend
     const requestOptions = {
@@ -73,6 +59,7 @@ async function submit() {
       body: JSON.stringify({
         patient_name: userStore.user?.name,
         sentence: text.value,
+        timestamp: timestamp
       }),
     };
 
@@ -105,10 +92,10 @@ onMounted(() => {
       messageStore.addMessage({
         message: data.message,
         user: botUser,
+        timestamp: new Date().toISOString()
       });
       scrollToBottom();
       console.log(`Received response: ${data.message}`);
-      // do what you want with this data
     },
     false,
   );
@@ -117,28 +104,4 @@ onMounted(() => {
 onUnmounted(() => {
   source?.close();
 });
-
-// interface Props {
-//   title: string;
-//   todos?: Todo[];
-//   meta: Meta;
-//   active: boolean;
-// }
-
-// const props = withDefaults(defineProps<Props>(), {
-//   todos: () => [],
-// });
-
-// const props = defineProps<{
-//   messages: string;
-//   bar?: number;
-// }>();
-
-// const clickCount = ref(0);
-// function increment() {
-//   clickCount.value += 1;
-//   return clickCount.value;
-// }
-
-// const todoCount = computed(() => props.todos.length);
 </script>

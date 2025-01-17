@@ -10,6 +10,7 @@ export interface Meta {
 export interface ChatMessage {
   message: string;
   user: User | undefined;
+  timestamp: string;
 }
 
 export interface User {
