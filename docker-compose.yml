@@ -37,17 +37,6 @@ services:
     build: ./text-to-triples/.
     volumes:
     - ./text-to-triples/app:/app
-  
-  # Quirine
-  front-end:
-    << : *service_defaults
-    build: ./front-end/.
-    ports: 
-    - "7000:8000"
-    volumes:
-    - ./front-end/src:/src
-    - ./front-end/data:/data
-  
 
   quasar:
     << : *service_defaults
