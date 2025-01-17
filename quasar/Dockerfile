@@ -1,7 +1,7 @@
 FROM nikolaik/python-nodejs:python3.10-nodejs22
 
 # Install python deps
-COPY requirements.txt /
+COPY backend/requirements.txt /
 RUN pip3 install -r /requirements.txt
 
 # Copy the frontend, needed to install Quasar
