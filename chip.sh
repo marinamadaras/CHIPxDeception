@@ -46,9 +46,9 @@ case $1 in
         docker compose -f docker-compose-base.yml ${str} build ${modules_up}
         docker compose -f docker-compose-base.yml ${str} up ${modules_up}
     else
-        echo "Starting specific modules: "$2
-        docker compose -f docker-compose-base.yml ${str} build $2
-        docker compose -f docker-compose-base.yml ${str} up $2
+        echo "Starting specific modules: "+"${@:2}"
+        docker compose -f docker-compose-base.yml ${str} build "${@:2}"
+        docker compose -f docker-compose-base.yml ${str} up "${@:2}"
     fi
     ;;
 
