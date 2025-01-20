@@ -4,13 +4,13 @@ import app.db
 
 # Should probably somehow talk to the knowledge graph and get info from there?
 # 'data' should be `None` if no advice could be formulated (can this even happen?)
-def reason_question(userID='John') -> dict:
+def reason_question(userID: str) -> dict:
     return {"data": rule_based_question(userID)}
 
 
 # TODO FdH: read required facts from external file in suitable format (ttl?)
 # TODO FdH: make specific to data required for reasoning
-def get_required_facts(userID:str) -> list:
+def get_required_facts(userID: str) -> list:
     return [
         f"userKG:{userID} userKG:hasValue ?o",
         f"""

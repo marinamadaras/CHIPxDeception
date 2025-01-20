@@ -20,34 +20,6 @@ resp = None
 async def internal_exception_handler(request: Request, exc: Exception):
     return JSONResponse(status_code=500, content=jsonable_encoder({"code": 500, "msg": repr(exc)}))
 
-
-def init_repository() -> None:
-    """
-    Initializes the knowledge repository.
-    Returns `None` if successfull and raises a ValueError otherwise.
-    """
-    files = {'config': ('config', open('/data/repo-config.ttl', 'rb'))}
-    result = requests.post(f'http://knowledge:7200/rest/repositories', files=files)
-    if result.status_code not in range(200, 300):
-        raise ValueError(f"There was potentially a problem with initializing the repository (status code {result.status_code}): {result.text}")
-
-
-def load_kg(repository: str) -> None:
-    """
-    Loads initial knowledge graph into `repository_name`.
-    Returns `None` if successfull and raises a ValueError otherwise.
-    """
-    data_path = '/data/userKG_inferred_stripped.rdf'
-    with open(data_path, 'rb') as rdf_file:
-        statements = rdf_file.read()
-    result = requests.post(
-        f'http://knowledge:7200/repositories/{repository}/statements',
-        headers={'Content-Type': 'application/rdf+xml'},
-        data=statements
-    )
-    if result.status_code not in range(200, 300):
-        raise ValueError(f"There was a problem with loading the initial statements into the repository {repository} (status code {result.status_code}): {result.text}")
-
 @app.get("/")
 def read_main():
     return {"message": "Welcome to the CHIP demo!"}
@@ -59,17 +31,6 @@ async def response(request: Request):
     global resp
     resp = data["reply"]
     return {"message": "OK!"}
-
-# Initialize everything - configure the repository and load the initial knowledge base
-@app.get('/init')
-def init():
-    repo_name = 'repo-test-1'
-    try:
-        init_repository()
-        load_kg(repo_name)
-    except ValueError as error:
-        return error
-    return f"Successfully configured and loaded initial statements into GraphDB repository {repo_name}."
 
 @app.get('/ping/{name}')
 def ping(name: str):

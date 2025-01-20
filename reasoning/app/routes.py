@@ -24,11 +24,11 @@ def store_knowledge():
     triples = json_data['triples']
     result = "Empty triple set received", 200
     if len(triples) > 0:
-        current_app.logger.debug('triples', triples)
+        current_app.logger.debug(f"triples: {triples}")
         triple = triples[0]
         # Convert JSON triple to RDF data
         rdf_data = app.util.json_triple_to_rdf(triple)
-        current_app.logger.debug("rdf_data:", rdf_data)
+        current_app.logger.debug(f"rdf_data: {rdf_data}")
 
         # Upload RDF data to GraphDB
         response = app.util.upload_rdf_data(rdf_data)

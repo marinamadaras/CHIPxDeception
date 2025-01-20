@@ -5,9 +5,9 @@ from SPARQLWrapper import JSON
 from app.tests.conftest import AnyStringWith
 
 
-def test_reason_advice(application, get_db_connection):
+def test_reason_advice(application, get_db_connection, test_name):
     with application.app_context():
-        ret = reason_advice()
+        ret = reason_advice(test_name)
         assert 'data' in ret
 
 

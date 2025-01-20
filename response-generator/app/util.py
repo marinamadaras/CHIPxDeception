@@ -10,11 +10,17 @@ reasoner_response = None
 sentence_data = None
 
 GREETINGS = (
-    "Hi",
-    "Hello",
-    "Yo"
+    "hi",
+    "hello",
+    "yo"
 )
 
+CLOSING = (
+    "bye",
+    "thanks",
+    "thank you",
+    "goodbye"
+)
 
 class ResponseType(StrEnum):
     Q = auto()
@@ -26,7 +32,7 @@ def formulate_question(query: str) -> str:
     Formulates a natural language question based on which facts are missing from the DB.
     """
     if 'prioritizedOver' in query:
-        return "that depends on what you find important. What do you prioritize?"
+        return "that depends on what you find important. What do you prioritize"
     elif 'hasPhysicalActivityHabit' in query:
         return "what physical activities do you regularly do"
     raise ValueError(f"Cannot formulate question for query {query}")
@@ -63,8 +69,11 @@ def generate_response(sentence_data, reasoner_response):
     response_type = ResponseType(reasoner_response["type"])
     response_data = reasoner_response["data"]
 
-    if sentence_data['sentence'] in GREETINGS:
+    if sentence_data['sentence'].lower() in GREETINGS:
         return f"Hi, {name}"
+
+    if sentence_data['sentence'].lower() in CLOSING:
+        return f"Goodbye {name}"
 
     if response_type == ResponseType.Q:
         question = formulate_question(response_data['data'])
@@ -77,12 +86,12 @@ def generate_response(sentence_data, reasoner_response):
 def check_responses():
     global reasoner_response, sentence_data
     if reasoner_response and sentence_data:
-        current_app.logger.info("Got both sentence and reasoning, sending reply...")
-        reply = generate_response(sentence_data, reasoner_response)
+        current_app.logger.info("Got both sentence and reasoning, sending response...")
+        message = generate_response(sentence_data, reasoner_response)
         reasoner_response = None
         sentence_data = None
-        payload = {"reply": reply}
-        current_app.logger.debug(f"response: {payload}")
+        payload = {"message": message}
+        current_app.logger.debug(f"sending response message: {payload}")
         front_end_address = os.environ.get("FRONTEND_ADDRESS", None)
         if front_end_address:
             requests.post(f"http://{front_end_address}/response", json=payload)

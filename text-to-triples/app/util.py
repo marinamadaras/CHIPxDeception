@@ -62,6 +62,7 @@ def send_triples(patient_name, sentence):
     nltk.download('averaged_perceptron_tagger')
 
     payload = extract_triples(patient_name, sentence)
+    payload["patient_name"] = patient_name
     current_app.logger.debug(f"payload: {payload}")
     reasoning_address = os.environ.get('REASONING_ADDRESS', None)
     if reasoning_address:
