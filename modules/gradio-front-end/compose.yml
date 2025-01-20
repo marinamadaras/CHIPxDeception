@@ -1,0 +1,11 @@
+services:
+  gradio-front-end:
+    expose: 
+    - 5000
+    env_file: setup.env
+    build: ./modules/gradio-front-end/.
+    ports: ["8000:8000"]
+    volumes:
+    - ./modules/gradio-front-end/src:/src
+    - ./modules/gradio-front-end/data:/data
+    depends_on: []

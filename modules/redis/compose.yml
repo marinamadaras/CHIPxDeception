@@ -1,0 +1,11 @@
+services:
+  redis:
+    env_file: setup.env
+    expose: 
+    - 6379
+    image: redis:latest
+    volumes:
+      - redisdata:/data
+
+volumes:
+  redisdata:
