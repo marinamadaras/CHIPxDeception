@@ -23,11 +23,11 @@ def response():
 def submit():
     data = request.json
 
-    resgen_address = os.environ.get("RESPONSE_GENERATOR_ADDRESS", None)
+    resgen_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
     if resgen_address:
         requests.post(f"http://{resgen_address}/subject-sentence", json=data)
     
-    t2t_address = os.environ.get("TEXT_TO_TRIPLE_ADDRESS", None)
+    t2t_address = current_app.config.get("TEXT_TO_TRIPLE_ADDRESS", None)
     if t2t_address:
         requests.post(f"http://{t2t_address}/new-sentence", json=data)
 
