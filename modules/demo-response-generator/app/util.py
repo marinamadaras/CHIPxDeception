@@ -1,3 +1,4 @@
+from logging import currentframe
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
@@ -92,6 +93,6 @@ def check_responses():
         sentence_data = None
         payload = {"message": message}
         current_app.logger.debug(f"sending response message: {payload}")
-        front_end_address = os.environ.get("FRONTEND_ADDRESS", None)
+        front_end_address = current_app.config.get("FRONTEND_ADDRESS", None)
         if front_end_address:
             requests.post(f"http://{front_end_address}/response", json=payload)

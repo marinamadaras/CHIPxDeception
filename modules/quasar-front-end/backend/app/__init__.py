@@ -30,7 +30,7 @@ def create_app(test=False):
 
     triple_extractor_address = core_module_address('TRIPLE_EXTRACTOR_MODULE')
     if triple_extractor_address:
-        flask_app.config['TRIPLE_EXTRACTOR_ADDRESS'] = triple_extractor_address
+        flask_app.config['TRIPLE_EXTRACTOR_ADDRESS'] = triple_extractor_address 
 
     response_generator_address = core_module_address('RESPONSE_GENERATOR_MODULE')
     if response_generator_address:

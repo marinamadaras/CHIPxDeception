@@ -27,7 +27,7 @@ def submit():
     if resgen_address:
         requests.post(f"http://{resgen_address}/subject-sentence", json=data)
     
-    t2t_address = current_app.config.get("TEXT_TO_TRIPLE_ADDRESS", None)
+    t2t_address = current_app.config.get("TRIPLE_EXTRACTOR_ADDRESS", None)
     if t2t_address:
         requests.post(f"http://{t2t_address}/new-sentence", json=data)
 
