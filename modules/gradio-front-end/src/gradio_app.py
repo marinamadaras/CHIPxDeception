@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 import gradio as gr
 import requests
 import datetime
+import os
 import time
 
 CUSTOM_PATH = "/gradio"
@@ -14,6 +15,11 @@ app = FastAPI()
 # Will be set by the response generator via the /response route
 resp = None
 
+def core_module_address(core_module):
+    try:
+        return os.environ[os.environ[core_module]]
+    except KeyError:
+        return None
 
 # NOTE: This is great for debugging, but we shouldn't do this in production...
 @app.exception_handler(500)
@@ -52,8 +58,14 @@ def send_to_t2t(chat_message):
         "sentence": chat_message,
         "timestamp": datetime.datetime.now().isoformat()
     }
-    requests.post(f"http://response-generator:5000/subject-sentence", json=payload)
-    requests.post(f"http://text-to-triples:5000/new-sentence", json=payload)
+
+    triple_extractor_address = core_module_address('TRIPLE_EXTRACTOR_MODULE')
+    if triple_extractor_address:
+        requests.post(f"http://{triple_extractor_address}/new-sentence", json=payload)
+
+    response_generator_address = core_module_address('RESPONSE_GENERATOR_MODULE')
+    if response_generator_address:
+        requests.post(f"http://{response_generator_address}/subject-sentence", json=payload)
 
     # This will definitely change, but is good enough for the demo
     # I just haven't found a way yet to make gradio update its UI from an
