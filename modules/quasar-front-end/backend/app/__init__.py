@@ -29,11 +29,11 @@ def create_app(test=False):
         flask_app.logger.addHandler(http_handler)
 
     triple_extractor_address = core_module_address('TRIPLE_EXTRACTOR_MODULE')
-    if triple_extractor_address and not test:
+    if triple_extractor_address:
         flask_app.config['TRIPLE_EXTRACTOR_ADDRESS'] = triple_extractor_address
 
     response_generator_address = core_module_address('RESPONSE_GENERATOR_MODULE')
-    if response_generator_address and not test:
+    if response_generator_address:
         flask_app.config['RESPONSE_GENERATOR_ADDRESS'] = response_generator_address
 
     redis_address = os.environ.get("REDIS", None)

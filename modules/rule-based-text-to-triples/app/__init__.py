@@ -25,7 +25,7 @@ def create_app(test=False):
         flask_app.logger.addHandler(http_handler)
 
     reasoner_address = core_module_address('REASONER_MODULE')
-    if reasoner_address and not test:
+    if reasoner_address:
         flask_app.config['REASONER_ADDRESS'] = reasoner_address
 
     from app.routes import bp

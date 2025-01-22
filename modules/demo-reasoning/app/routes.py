@@ -47,8 +47,9 @@ def store_knowledge():
 # then we try to formulate a question instead.
 @bp.route('/reason')
 def reason_and_notify_response_generator():
-    response_generator_address = os.environ.get("RESPONSE_GENERATOR_ADDRESS", None)
     payload = app.util.reason()
+
+    response_generator_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
     if response_generator_address:
         requests.post(f"http://{response_generator_address}/submit-reasoner-response", json=payload)
 
