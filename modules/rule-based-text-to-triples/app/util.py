@@ -27,9 +27,7 @@ def postprocess_triple(triple, userID):
         'object': object_,
     }
 
-# NOTE: Deprecated, as this way of extracting tuples does not work properly:
-#       - Assumes a sentence structure where the patient talks in third person; instead, the subject should always be the patient if the patient uses "I".
-#       - Even then, a simple sentence such as "I like eating with my mother" is not captured properly, as it'll become 'sub:I pred:like obj:mother'
+
 def extract_triples(patient_name, sentence):
     triples = []
     tokens = nltk.word_tokenize(sentence)
@@ -64,6 +62,6 @@ def send_triples(patient_name, sentence):
     payload = extract_triples(patient_name, sentence)
     payload["patient_name"] = patient_name
     current_app.logger.debug(f"payload: {payload}")
-    reasoning_address = os.environ.get('REASONING_ADDRESS', None)
-    if reasoning_address:
-        requests.post(f"http://{reasoning_address}/store-knowledge", json=payload)
+    reasoner_address = current_app.config.get('REASONER_ADDRESS', None)
+    if reasoner_address:
+        requests.post(f"http://{reasoner_address}/store-knowledge", json=payload)
