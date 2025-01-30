@@ -1,5 +1,5 @@
-logger_module: default-logger
-frontend_module: quasar-front-end
-response_generator_module: demo-response-generator
-reasoner_module: demo-reasoning
-triple_extractor_module: rule-based-text-to-triples
+logger_module: logger-default
+frontend_module: front-end-quasar
+response_generator_module: response-generator-demo
+reasoner_module: reasoning-demo
+triple_extractor_module: text-to-triples-rule-based

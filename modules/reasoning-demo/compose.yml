@@ -1,0 +1,11 @@
+services:
+  reasoning-demo:
+    env_file: setup.env
+    expose: 
+    - 5000
+    build: ./modules/reasoning-demo/.
+    volumes:
+    - ./modules/reasoning-demo/app:/app
+    - ./modules/reasoning-demo/data:/data
+    depends_on:
+    - knowledge-demo

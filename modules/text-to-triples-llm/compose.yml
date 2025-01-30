@@ -1,0 +1,9 @@
+services:
+  text-to-triples-llm:
+    env_file: setup.env
+    expose: 
+    - 5000
+    build: ./modules/text-to-triples-llm/.
+    volumes:
+    - ./modules/text-to-triples-llm/app:/app
+    depends_on: []

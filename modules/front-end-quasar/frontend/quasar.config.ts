@@ -113,7 +113,7 @@ export default defineConfig((/* ctx */) => {
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
         '/kgraph': {
-          target: `http://${process.env.DEMO_KNOWLEDGE}`,
+          target: `http://${process.env.KNOWLEDGE_DEMO}`,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/kgraph/, ''),
         },

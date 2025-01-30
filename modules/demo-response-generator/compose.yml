@@ -1,9 +1,0 @@
-services:
-  demo-response-generator:
-    env_file: setup.env
-    expose: 
-    - 5000
-    build: ./modules/demo-response-generator/.
-    volumes:
-    - ./modules/demo-response-generator/app:/app
-    depends_on: []

@@ -1,0 +1,9 @@
+services:
+  text-to-triples-rule-based:
+    env_file: setup.env
+    expose: 
+    - 5000
+    build: ./modules/text-to-triples-rule-based/.
+    volumes:
+    - ./modules/text-to-triples-rule-based/app:/app
+    depends_on: []

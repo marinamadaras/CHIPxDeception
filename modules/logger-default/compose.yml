@@ -1,13 +1,13 @@
 services:
-  default-logger:
+  logger-default:
     env_file: setup.env
     expose:
     - 5000
-    build: ./modules/default-logger/.
+    build: ./modules/logger-default/.
     ports: ["8010:5000"]
     volumes:
-    - ./modules/default-logger/app:/app
-    - ./modules/default-logger/logs:/logs
+    - ./modules/logger-default/app:/app
+    - ./modules/logger-default/logs:/logs
     # Otherwise we get double logging in the console.
     logging:
       driver: none
