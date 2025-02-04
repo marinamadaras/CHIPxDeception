@@ -107,14 +107,3 @@ def process_input_output(input_data):
         str: A JSON string formatted to include S-P-O triples extracted from the input, or an empty structure if no components are explicit.
     """
     return predict_and_form_triples(input_data, model, tokenizer, label_map)
-
-
-# Example usage
-input_json = {
-    "patient_name": "John",
-    "sentence": "I have started using nicotine gum.",
-    "timestamp": "2024-10-24T10:00:00Z"
-}
-
-output_json = process_input_output(input_json)
-print(output_json)

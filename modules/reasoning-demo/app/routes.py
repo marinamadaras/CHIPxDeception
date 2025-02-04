@@ -38,7 +38,7 @@ def store_knowledge():
             result = jsonify({"error": f"Failed to upload data: {response.status_code}, {response.text}"}), response.status_code
 
     # IF DONE, START REASONING (should query knowledge base somehow)
-    reason_and_notify_response_generator()
+    reason_and_notify_response_generator(json_data)
 
     return result
 
@@ -46,9 +46,9 @@ def store_knowledge():
 # Note that we first check if we can give advice, and if that is "None",
 # then we try to formulate a question instead.
 @bp.route('/reason')
-def reason_and_notify_response_generator():
+def reason_and_notify_response_generator(text_to_triple_data):
     payload = app.util.reason()
-
+    payload['sentence_data'] = text_to_triple_data['sentence_data']
     response_generator_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
     if response_generator_address:
         requests.post(f"http://{response_generator_address}/submit-reasoner-response", json=payload)

@@ -32,17 +32,11 @@ def create_app(test=False):
     if triple_extractor_address:
         flask_app.config['TRIPLE_EXTRACTOR_ADDRESS'] = triple_extractor_address 
 
-    response_generator_address = core_module_address('RESPONSE_GENERATOR_MODULE')
-    if response_generator_address:
-        flask_app.config['RESPONSE_GENERATOR_ADDRESS'] = response_generator_address
-
     redis_address = os.environ.get("REDIS", None)
     if redis_address:
         flask_app.config['REDIS_ADDRESS'] = redis_address
         flask_app.config['REDIS_URL'] = f'redis://{redis_address}'
         flask_app.teardown_appcontext(close_db)
-
-
 
     from app.routes import bp
     flask_app.register_blueprint(bp)

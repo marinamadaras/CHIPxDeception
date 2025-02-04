@@ -28,8 +28,10 @@ def postprocess_triple(triple, userID):
     }
 
 
-def extract_triples(patient_name, sentence):
+def extract_triples(sentence_data):
     triples = []
+    patient_name = sentence_data['patient_name']
+    sentence = sentence_data['sentence']
     tokens = nltk.word_tokenize(sentence)
     tagged_tokens = nltk.pos_tag(tokens)
 
@@ -55,12 +57,12 @@ def extract_triples(patient_name, sentence):
     return {"triples": triples}
 
 
-def send_triples(patient_name, sentence):
+def send_triples(sentence_data):
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
 
-    payload = extract_triples(patient_name, sentence)
-    payload["patient_name"] = patient_name
+    payload = extract_triples(sentence_data)
+    payload['sentence_data'] = sentence_data
     current_app.logger.debug(f"payload: {payload}")
     reasoner_address = current_app.config.get('REASONER_ADDRESS', None)
     if reasoner_address:

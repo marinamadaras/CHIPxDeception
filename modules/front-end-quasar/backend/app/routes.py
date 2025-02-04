@@ -22,10 +22,6 @@ def response():
 @bp.route('/submit', methods=['POST'])
 def submit():
     data = request.json
-
-    resgen_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
-    if resgen_address:
-        requests.post(f"http://{resgen_address}/subject-sentence", json=data)
     
     t2t_address = current_app.config.get("TRIPLE_EXTRACTOR_ADDRESS", None)
     if t2t_address:

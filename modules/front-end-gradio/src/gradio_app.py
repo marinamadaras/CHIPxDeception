@@ -63,10 +63,6 @@ def send_to_t2t(chat_message):
     if triple_extractor_address:
         requests.post(f"http://{triple_extractor_address}/new-sentence", json=payload)
 
-    response_generator_address = core_module_address('RESPONSE_GENERATOR_MODULE')
-    if response_generator_address:
-        requests.post(f"http://{response_generator_address}/subject-sentence", json=payload)
-
     # This will definitely change, but is good enough for the demo
     # I just haven't found a way yet to make gradio update its UI from an
     # API call...

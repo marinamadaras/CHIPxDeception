@@ -6,14 +6,11 @@ import requests
 import os
 
 
-
-reasoner_response = None
-sentence_data = None
-
 GREETINGS = (
     "hi",
     "hello",
-    "yo"
+    "yo",
+    "hey"
 )
 
 CLOSING = (
@@ -61,38 +58,40 @@ def formulate_advice(activity: str) -> str:
     return activity
 
 
-def generate_response(sentence_data, reasoner_response):
+def generate_response(reasoner_response):
+    sentence_data = reasoner_response['sentence_data']
     try:
         name = sentence_data['patient_name']
     except KeyError:
         name = "Unknown patient"
-    current_app.logger.debug(f"sentence_data: {sentence_data}")
+    current_app.logger.debug(f"reasoner_response: {reasoner_response}")
     response_type = ResponseType(reasoner_response["type"])
     response_data = reasoner_response["data"]
 
+    message = "I don't understand, could you try rephrasing it?"
+
     if sentence_data['sentence'].lower() in GREETINGS:
-        return f"Hi, {name}"
+        message = f"Hi, {name}"
 
-    if sentence_data['sentence'].lower() in CLOSING:
-        return f"Goodbye {name}"
+    elif sentence_data['sentence'].lower() in CLOSING:
+        message = f"Goodbye {name}"
 
-    if response_type == ResponseType.Q:
+    elif response_type == ResponseType.Q:
         question = formulate_question(response_data['data'])
-        return f"{name}, {question}?"
+        message = f"{name}, {question}?"
+
     elif response_type == ResponseType.A:
         activity = formulate_advice(response_data['data'][1])
-        return f"How about the activity '{activity}', {name}?"
+        message = f"How about the activity '{activity}', {name}?"
+
+    return message
 
 
-def check_responses():
-    global reasoner_response, sentence_data
-    if reasoner_response and sentence_data:
-        current_app.logger.info("Got both sentence and reasoning, sending response...")
-        message = generate_response(sentence_data, reasoner_response)
-        reasoner_response = None
-        sentence_data = None
-        payload = {"message": message}
-        current_app.logger.debug(f"sending response message: {payload}")
-        front_end_address = current_app.config.get("FRONTEND_ADDRESS", None)
-        if front_end_address:
-            requests.post(f"http://{front_end_address}/response", json=payload)
+def send_message(reasoner_response):
+    message = generate_response(reasoner_response)
+    payload = {"message": message}
+    current_app.logger.debug(f"sending response message: {payload}")
+    front_end_address = current_app.config.get("FRONTEND_ADDRESS", None)
+    if front_end_address:
+        requests.post(f"http://{front_end_address}/response", json=payload)
+
