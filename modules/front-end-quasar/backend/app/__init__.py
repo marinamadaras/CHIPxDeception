@@ -7,10 +7,11 @@ from app.db import close_db
 import os
 
 
-class ServiceNameFilter(Filter):
+class ServiceNameFilter(Filter): # pragma: no cover
     def filter(self, record):
         record.service_name = "Website Backend"
         return True
+
 
 def core_module_address(core_module):
     try:
@@ -18,12 +19,13 @@ def core_module_address(core_module):
     except KeyError:
         return None
 
+
 def create_app(test=False):
     flask_app = Flask(__name__)
     CORS(flask_app)
-
     logger_address = core_module_address('LOGGER_MODULE')
-    if logger_address and not test:
+
+    if logger_address and not test: # pragma: no cover
         http_handler = HTTPHandler(logger_address, "/log", method="POST")
         flask_app.logger.addFilter(ServiceNameFilter())
         flask_app.logger.addHandler(http_handler)

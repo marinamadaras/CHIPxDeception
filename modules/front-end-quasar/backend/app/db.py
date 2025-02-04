@@ -7,7 +7,6 @@ def get_db_connection():
     """
     if 'db' not in g:
         address = current_app.config['REDIS_ADDRESS']
-        # g.db = SPARQLWrapper(url)
     return g.db
 
 

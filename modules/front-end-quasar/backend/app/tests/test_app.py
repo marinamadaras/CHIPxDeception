@@ -13,14 +13,11 @@ def test_response(client, message_data):
         assert res.status_code == 200 and len(res.text) > 0
 
 
-def test_submit(client, monkeypatch, sentence_data):
-    dummy_address = 'dummy'
-    monkeypatch.setenv("TEXT_TO_TRIPLE_ADDRESS", dummy_address)
-    monkeypatch.setenv("RESPONSE_GENERATOR_ADDRESS", dummy_address)
+def test_submit(client, sentence_data, triple_address):
     with patch('app.routes.requests') as r:
         res = client.post(f"/submit", json=sentence_data)
 
-        r.post.assert_called_with(AnyStringWith(dummy_address), json=sentence_data)
+        r.post.assert_called_with(AnyStringWith(triple_address), json=sentence_data)
         assert res.status_code == 200 and sentence_data['sentence'] in res.text
 
 
