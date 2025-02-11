@@ -35,8 +35,6 @@ def create_app(test=False):
         flask_app.config['knowledge_url'] = f"http://{knowledge_address}/repositories/{repository_name}"
         flask_app.teardown_appcontext(close_db)
 
-
-
     from app.routes import bp
     flask_app.register_blueprint(bp)
 

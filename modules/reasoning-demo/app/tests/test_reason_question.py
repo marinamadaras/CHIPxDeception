@@ -5,13 +5,13 @@ from SPARQLWrapper import JSON
 from app.tests.conftest import AnyStringWith
 
 
-def test_reason_question(application, get_db_connection, test_name):
+def test_reason_question(application, get_db_connection, sample_name):
     with application.app_context():
-        ret = reason_question(test_name)
+        ret = reason_question(sample_name)
         assert 'data' in ret
 
 
-def test_rule_based_question_empty(application, test_name):
+def test_rule_based_question_empty(application, sample_name):
     with application.app_context(), \
             patch('app.reason_question.get_required_facts') as req, \
             patch('app.reason_question.get_missing_facts') as mis,  \
@@ -19,7 +19,7 @@ def test_rule_based_question_empty(application, test_name):
 
         srt.return_value = []
 
-        mf = rule_based_question(test_name)
+        mf = rule_based_question(sample_name)
 
         req.assert_called_once()
         mis.assert_called_once()
@@ -28,7 +28,7 @@ def test_rule_based_question_empty(application, test_name):
         assert mf is None
 
 
-def test_rule_based_question_non_empty(application, test_name):
+def test_rule_based_question_non_empty(application, sample_name):
     with application.app_context(), \
             patch('app.reason_question.get_required_facts') as req, \
             patch('app.reason_question.get_missing_facts') as mis,  \
@@ -37,7 +37,7 @@ def test_rule_based_question_non_empty(application, test_name):
         mock = MagicMock()
         srt.return_value = [mock]
 
-        mf = rule_based_question(test_name)
+        mf = rule_based_question(sample_name)
 
         req.assert_called_once()
         mis.assert_called_once()
@@ -63,11 +63,11 @@ def test_query_for_presence(application, get_db_connection):
 
 
 # All the queries should operate on the given user's KG
-def test_get_required_facts(application, test_name):
+def test_get_required_facts(application, sample_name):
     with application.app_context():
-        ret = get_required_facts(test_name)
+        ret = get_required_facts(sample_name)
         for query in ret:
-            assert f'userKG:{test_name}' in query
+            assert f'userKG:{sample_name}' in query
 
 
 def test_get_missing_facts_empty(application):

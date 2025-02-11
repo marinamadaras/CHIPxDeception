@@ -1,7 +1,9 @@
+from typing import NamedTuple
 from rdflib import Graph, Namespace, URIRef, Literal
 from app.reason_question import reason_question
 from app.reason_advice import reason_advice
-from flask import current_app
+from flask import current_app, Response
+from collections import namedtuple
 
 import requests
 
@@ -56,7 +58,7 @@ def upload_rdf_data(rdf_data, content_type='application/x-turtle'):
     #       Maybe we should only return what we want and throw exceptions in the other cases
     #       These exceptions can be caught, and then handled appropriately in the route itself via status codes
     if not url:
-        return "No address configured for knowledge database", 503
+        return Response("No address configured for knowledge database", 503)
     endpoint = f"{url}/statements"
 
     # Send a POST request to upload the RDF data
@@ -89,3 +91,12 @@ def reason():
     current_app.logger.info(f"reasoning result: {response}")
     return {"type": reason_type, "data": response}
 
+
+def reason_and_notify_response_generator(sentence_data):
+    payload = reason()
+    payload['sentence_data'] = sentence_data
+    response_generator_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
+    if response_generator_address:
+        requests.post(f"http://{response_generator_address}/submit-reasoner-response", json=payload)
+
+    return 'OK', 200

@@ -10,11 +10,25 @@ class AnyStringWith(str):
 
 
 @pytest.fixture()
-def application(monkeypatch):
-    monkeypatch.setenv("KNOWLEDGE_ADDRESS", "dummy")
+def response_generator_address():
+    return "dummy_response_generator"
+
+
+@pytest.fixture()
+def knowledge_address():
+    return "dummy_knowledge"
+
+
+
+@pytest.fixture()
+def application(monkeypatch, response_generator_address, knowledge_address):
+    monkeypatch.setenv("KNOWLEDGE_DEMO", knowledge_address)
+    monkeypatch.setenv("RESPONSE_GENERATOR_MODULE", "TEST_MOD_1")
+    monkeypatch.setenv("TEST_MOD_1", response_generator_address)
     app = create_app(test=True)
     # For detecting errors and disabling logging in general
     setattr(app, "logger", Mock(app.logger))
+    app.config["DEBUG"] = True  # Actually give stack-traces on client failures.
     yield app
 
 
@@ -42,6 +56,12 @@ def reason_advice():
 
 
 @pytest.fixture()
+def reason():
+    with patch('app.util.reason') as reason_advice:
+        yield reason_advice
+
+
+@pytest.fixture()
 def get_db_connection():
     with patch('app.db.get_db_connection') as get_db_connection:
         conn = MagicMock()
@@ -59,5 +79,34 @@ def triples():
 
 
 @pytest.fixture()
-def test_name():
-    return 'FooBarBaz'
+def sample_sentence():
+    return "Some cool sentence."
+
+
+@pytest.fixture()
+def sample_name():
+    return 'SomeRandomName'
+
+
+@pytest.fixture()
+def sample_timestamp():
+    return '...'
+
+
+@pytest.fixture()
+def sample_sentence_data(sample_sentence, sample_name, sample_timestamp):
+    return {
+        'patient_name': sample_name,
+        'sentence': sample_sentence,
+        'timestamp': sample_timestamp
+    }
+
+
+@pytest.fixture()
+def sample_t2t_data(sample_sentence_data, triples):
+    t2t = SimpleNamespace()
+    sentence_data = {'sentence_data': sample_sentence_data}
+    t2t.empty = triples.empty | sentence_data
+    t2t.one = triples.one | sentence_data
+    t2t.many = triples.many | sentence_data
+    return t2t

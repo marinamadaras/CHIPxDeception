@@ -7,39 +7,34 @@ def test_hello(client):
     assert b'Hello' in response.data
 
 
-def test_store_knowledge_empty(client, util, triples):
-    res = client.post(f"/store-knowledge", json=triples.empty)
+def test_store_knowledge_empty(client, util, sample_t2t_data):
+    res = client.post(f"/store-knowledge", json=sample_t2t_data.empty)
+    util.reason_and_notify_response_generator.assert_called_once()
 
-    util.reason.assert_called_once()
     assert b"empty" in res.data.lower()
     assert res.status_code == 200
 
 
-def test_store_knowledge_success(client, util, triples):
+def test_store_knowledge_success(client, util, sample_t2t_data):
     knowledge_res = Mock()
     knowledge_res.status_code = 204
     util.upload_rdf_data.return_value = knowledge_res
 
-    res = client.post(f"/store-knowledge", json=triples.one)
+    res = client.post(f"/store-knowledge", json=sample_t2t_data.one)
 
-    util.reason.assert_called_once()
+    util.reason_and_notify_response_generator.assert_called_once()
     util.json_triple_to_rdf.assert_called_once()
     assert res.status_code == 200
 
 
-def test_store_knowledge_inference_failed(client, util, triples):
-    res = client.post(f"/store-knowledge", json=triples.one)
+def test_store_knowledge_inference_failed(client, util, sample_t2t_data):
+    ret = Mock()
+    ret.status_code = 500
+    ret.text = "blabla"
+    util.upload_rdf_data.return_value = ret
 
-    util.reason.assert_called_once()
+    res = client.post(f"/store-knowledge", json=sample_t2t_data.one)
+
+    util.reason_and_notify_response_generator.assert_called_once()
     util.json_triple_to_rdf.assert_called_once()
-    assert res.status_code == 500
-
-
-def test_reason_and_notify_response_generator(client, util, monkeypatch):
-    with patch('app.routes.requests') as r:
-        dummy_url = 'dummy'
-        monkeypatch.setenv('RESPONSE_GENERATOR_ADDRESS', dummy_url)
-        res = client.get(f"/reason")
-        util.reason.assert_called_once()
-        r.post.assert_called_once_with(AnyStringWith(dummy_url), json=ANY)
-        assert res.status_code == 200
+    assert not res.status_code < 400  # Equivalent of requests.Response.ok

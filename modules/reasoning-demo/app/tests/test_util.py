@@ -1,5 +1,5 @@
 from unittest.mock import Mock, patch, ANY
-from app.util import json_triple_to_rdf, upload_rdf_data, reason
+from app.util import json_triple_to_rdf, upload_rdf_data, reason, reason_and_notify_response_generator
 from app.tests.conftest import AnyStringWith
 
 
@@ -73,7 +73,7 @@ def test_upload_rdf_data_no_knowledge(application):
         res = upload_rdf_data(Mock())
 
         # Confirm that we return a 503 due to missing knowledge DB
-        assert 503 in res
+        assert res.status_code == 503
 
 
 def test_reason_advice_success(application, reason_advice, reason_question):
@@ -102,3 +102,11 @@ def test_reason_advice_failure(application, reason_advice, reason_question):
         reason_question.assert_called_once()
         assert ret['type'] == 'Q'
         assert 'data' in ret
+
+
+def test_reason_and_notify_response_generator(application, sample_sentence_data, response_generator_address, reason):
+    with patch('app.util.requests') as r, application.app_context():
+        reason.return_value = {}
+        reason_and_notify_response_generator(sample_sentence_data)
+        reason.assert_called_once()
+        r.post.assert_called_once_with(AnyStringWith(response_generator_address), json=ANY)

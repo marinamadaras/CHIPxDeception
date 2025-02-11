@@ -22,7 +22,9 @@ def store_knowledge():
     current_app.logger.info(f"Triples received: {request.json}")
     json_data = request.json
     triples = json_data['triples']
+    sentence_data = json_data['sentence_data']
     result = "Empty triple set received", 200
+
     if len(triples) > 0:
         current_app.logger.debug(f"triples: {triples}")
         triple = triples[0]
@@ -38,19 +40,23 @@ def store_knowledge():
             result = jsonify({"error": f"Failed to upload data: {response.status_code}, {response.text}"}), response.status_code
 
     # IF DONE, START REASONING (should query knowledge base somehow)
-    reason_and_notify_response_generator(json_data)
-
+    app.util.reason_and_notify_response_generator(sentence_data)
     return result
 
 
+# NOTE: By making this a route, it needs to receive the correct input as well.
+# This is somewhat bad... It complicates the design. Some questions:
+# - Do we even want people ot be able to just call this separately?
+# - Does this mean we need state? We need to somehow pass the sentence data to the reasoner
+# - I see that we only really use the sentence_data, so we definitely do not need the triples for sending a message to the response gen
+# - We DO however need the sentence data, because we can't obtain that from anywhere else. This makes sense.
+# - That means we EXPECT a post, with the sentence data itself.
+
 # Note that we first check if we can give advice, and if that is "None",
 # then we try to formulate a question instead.
-@bp.route('/reason')
-def reason_and_notify_response_generator(text_to_triple_data):
-    payload = app.util.reason()
-    payload['sentence_data'] = text_to_triple_data['sentence_data']
-    response_generator_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
-    if response_generator_address:
-        requests.post(f"http://{response_generator_address}/submit-reasoner-response", json=payload)
-
+@bp.route('/reason', methods=['POST'])
+def reason():
+    sentence_data = request.json
+    app.util.reason_and_notify_response_generator(sentence_data)
     return 'OK', 200
+
