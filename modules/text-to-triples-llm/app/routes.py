@@ -1,6 +1,6 @@
+from unittest.mock import ANY
 from flask import Blueprint, current_app, request
 import app.util
-
 
 bp = Blueprint('main', __name__)
 
@@ -16,6 +16,6 @@ def new_sentence():
     sentence = sentence_data['sentence']
     patient_name = sentence_data['patient_name']
     timestamp =sentence_data['timestamp']
-    current_app.logger.debug(f"Patient {patient_name} wrote {sentence}")
+    current_app.logger.debug(f"Patient {patient_name} wrote {sentence} at {timestamp}")
     app.util.send_triples(sentence_data)
     return 'OK'

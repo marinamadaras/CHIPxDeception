@@ -6,11 +6,8 @@ def test_hello(client):
     assert b'Hello' in response.data
 
 
-def test_new_sentence(client, sample_name, sample_sentence):
+def test_new_sentence(client, sample_sentence_data):
     with patch('app.util.send_triples') as st:
-        res = client.post('/new-sentence', json={
-            'sentence': sample_sentence,
-            'patient_name': sample_name
-        })
+        res = client.post('/new-sentence', json=sample_sentence_data)
         st.assert_called_once()
         assert res.status_code == 200

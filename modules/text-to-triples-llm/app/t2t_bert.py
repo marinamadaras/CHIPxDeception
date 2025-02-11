@@ -1,16 +1,9 @@
 import torch
 from transformers import BertTokenizerFast
 import json
+from app import model
 
 
-
-# Load the finetuned BERT model from the specified file path
-# Replace '<path_to_model>' with the actual path to the model file
-model_path = r'/best_model.pth'
-model = torch.load(model_path)
-
-# Switch the model to evaluation mode
-model.eval()
 
 # Initialize the tokenizer for processing inputs
 tokenizer = BertTokenizerFast.from_pretrained('bert-base-uncased')
@@ -91,19 +84,18 @@ def predict_and_form_triples(input_data, model, tokenizer, label_map):
             "object": ""
         })
 
-    return {"triples": triples}
+    return triples
 
 
 def process_input_output(input_data):
     """ 
-    Processes input JSON string to extract S-P-O triples using the 'predict_and_form_triples' function. 
-    It converts the input JSON string to a dictionary, applies the S-P-O prediction and aggregation logic, 
-    and then serializes the result back into a JSON string with formatted output.
-
+    Processes input dict to extract S-P-O triples using the 'predict_and_form_triples' function, 
+    applying the S-P-O prediction and aggregation logic, returning a dict with triples.
     Args:
-        input_json (str): A JSON string containing the input data.
+        input_data: A dict containing the input data.
 
     Returns:
-        str: A JSON string formatted to include S-P-O triples extracted from the input, or an empty structure if no components are explicit.
+        triples: A dict with a list of S-P-O triples extracted from the input.
     """
-    return predict_and_form_triples(input_data, model, tokenizer, label_map)
+    triples = predict_and_form_triples(input_data, model.get_model(), tokenizer, label_map)
+    return {"triples": triples}
