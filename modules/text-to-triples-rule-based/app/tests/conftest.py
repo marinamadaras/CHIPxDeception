@@ -14,7 +14,14 @@ def create_triple(subj, pred, obj):
 
 
 @pytest.fixture()
-def application():
+def reasoner_address():
+    return "dummy"
+
+
+@pytest.fixture()
+def application(monkeypatch, reasoner_address):
+    monkeypatch.setenv("REASONER_MODULE", "TEST_MOD_1")
+    monkeypatch.setenv("TEST_MOD_1", reasoner_address)
     yield create_app(test=True)
 
 
@@ -27,13 +34,28 @@ def client(application):
 
 
 @pytest.fixture()
+def sample_sentence():
+    return "Some cool sentence."
+
+
+@pytest.fixture()
 def sample_name():
     return 'John'
 
 
 @pytest.fixture()
-def sample_sentence():
-    return 'Some cool sentence.'
+def sample_timestamp():
+    return '...'
+
+
+@pytest.fixture()
+def sample_sentence_data(sample_sentence, sample_name, sample_timestamp):
+    return {
+        'patient_name': sample_name,
+        'sentence': sample_sentence,
+        'timestamp': sample_timestamp
+    }
+
 
 
 @pytest.fixture()
