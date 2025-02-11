@@ -1,6 +1,6 @@
 import pytest
 from app import create_app
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 from types import SimpleNamespace
 
 
@@ -11,10 +11,8 @@ class AnyStringWith(str):
 
 @pytest.fixture()
 def util():
-    import sys
-    del sys.modules['app.util']
-    import app.util
-    return app.util
+    with patch('app.util') as util:
+        yield util
 
 
 @pytest.fixture()
@@ -40,9 +38,9 @@ def sentence_data():
 
 
 @pytest.fixture()
-def reasoner_response():
+def reasoner_response(sentence_data):
     rr = SimpleNamespace()
-    rr.greet = {"data": None, "type": "Q"}
-    rr.question = {"data": {"data": "prioritizedOver"}, "type": "Q"}
-    rr.advice = {"data": {"data": [None, "some activity"]}, "type": "A"}
+    rr.greet = {"data": None, "type": "Q", "sentence_data": sentence_data.greet}
+    rr.question = {"data": {"data": "prioritizedOver"}, "type": "Q", "sentence_data": sentence_data.other}
+    rr.advice = {"data": {"data": [None, "some activity"]}, "type": "A", "sentence_data": sentence_data.other}
     return rr
