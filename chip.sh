@@ -39,9 +39,19 @@ for core_module in ${core_modules[@]}; do
 done
 
 case $1 in
+  build)
+    if [[ -z "$2" ]] ; then
+        echo "Building core modules:"
+        echo $modules_up
+        docker compose -f docker-compose-base.yml ${str} build ${modules_up}
+    else
+        echo "Building specific modules: "+"${@:2}"
+        docker compose -f docker-compose-base.yml ${str} build "${@:2}"
+    fi
+    ;;
   start)
     if [[ -z "$2" ]] ; then
-        echo "Booting system with core modules:"
+        echo "Starting system with core modules:"
         echo $modules_up
         docker compose -f docker-compose-base.yml ${str} build ${modules_up}
         docker compose -f docker-compose-base.yml ${str} up ${modules_up}
@@ -65,6 +75,7 @@ case $1 in
     ;;
 
   *)
-    echo "Please use either 'start' or 'stop' or 'restart'"
+    echo "Please use either 'build', 'start', 'stop', 'restart'."
+    echo "Add space-separated module names afterwards to perform the operation for specific modules."
     ;;
 esac
