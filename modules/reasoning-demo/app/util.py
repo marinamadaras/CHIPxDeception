@@ -1,9 +1,7 @@
-from typing import NamedTuple
 from rdflib import Graph, Namespace, URIRef, Literal
 from app.reason_question import reason_question
 from app.reason_advice import reason_advice
-from flask import current_app, Response
-from collections import namedtuple
+from flask import current_app
 
 import requests
 
@@ -47,29 +45,24 @@ def upload_rdf_data(rdf_data, content_type='application/x-turtle'):
     :param content_type: MIME type of the RDF data (default is Turtle)
     :return: Response object
     """
+    url = current_app.config.get('knowledge_url', None)
+    if not url:
+        current_app.logger.warning("No URL configured for knowledge DB, not uploading anything...")
+        return
+
+
+    # Send a POST request to upload the RDF data
+    endpoint = f"{url}/statements"
     headers = {
         'Content-Type': content_type
     }
-
-    # Construct the full endpoint URL
-    url = current_app.config.get('knowledge_url', None)
-
-    # TODO: Improve consistency in return types
-    #       Maybe we should only return what we want and throw exceptions in the other cases
-    #       These exceptions can be caught, and then handled appropriately in the route itself via status codes
-    if not url:
-        return Response("No address configured for knowledge database", 503)
-    endpoint = f"{url}/statements"
-
-    # Send a POST request to upload the RDF data
     response = requests.post(endpoint, data=rdf_data, headers=headers)
 
-    if not response.ok:
-        current_app.logger.error(f"Failed to upload RDF data: {response.status_code}, Response: {response.text}")
-    else:
+    if response.ok:
         current_app.logger.info('Successfully uploaded RDF data.')
-
-    return response
+    else:
+        current_app.logger.error(f"Failed to upload data: {response.status_code}, {response.text}")
+        raise RuntimeError(f"Could not store data in knowledge base (status: {response.status_code}, {response.text})")
 
 
 def reason():
@@ -97,6 +90,18 @@ def reason_and_notify_response_generator(sentence_data):
     payload['sentence_data'] = sentence_data
     response_generator_address = current_app.config.get("RESPONSE_GENERATOR_ADDRESS", None)
     if response_generator_address:
-        requests.post(f"http://{response_generator_address}/submit-reasoner-response", json=payload)
+        requests.post(f"http://{response_generator_address}/process", json=payload)
 
-    return 'OK', 200
+
+def store_knowledge(triples):
+    if len(triples) == 0:
+        current_app.logger.warning("Triple list was empty, nothing to store...")
+        return
+
+    current_app.logger.debug(f"triples: {triples}")
+    triple = triples[0]
+    rdf_data = json_triple_to_rdf(triple)  # Convert JSON triple to RDF data.
+    current_app.logger.debug(f"rdf_data: {rdf_data}")
+
+    # Upload RDF data to GraphDB
+    upload_rdf_data(rdf_data)

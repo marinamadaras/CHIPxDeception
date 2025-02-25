@@ -1,4 +1,3 @@
-from unittest.mock import ANY
 from flask import Blueprint, current_app, request
 import app.util
 
@@ -10,8 +9,8 @@ def hello():
     return "Hello, I am the text to triples module!"
 
 
-@bp.route('/new-sentence', methods=['POST'])
-def new_sentence():
+@bp.route('/process', methods=['POST'])
+def process():
     sentence_data = request.json
     sentence = sentence_data['sentence']
     patient_name = sentence_data['patient_name']

@@ -93,5 +93,5 @@ def send_message(reasoner_response):
     current_app.logger.debug(f"sending response message: {payload}")
     front_end_address = current_app.config.get("FRONTEND_ADDRESS", None)
     if front_end_address:
-        requests.post(f"http://{front_end_address}/response", json=payload)
+        requests.post(f"http://{front_end_address}/process", json=payload)
 

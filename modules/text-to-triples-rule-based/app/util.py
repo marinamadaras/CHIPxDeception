@@ -66,4 +66,4 @@ def send_triples(sentence_data):
     current_app.logger.debug(f"payload: {payload}")
     reasoner_address = current_app.config.get('REASONER_ADDRESS', None)
     if reasoner_address:
-        requests.post(f"http://{reasoner_address}/store-knowledge", json=payload)
+        requests.post(f"http://{reasoner_address}/process", json=payload)
