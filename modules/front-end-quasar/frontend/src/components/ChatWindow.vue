@@ -11,6 +11,13 @@
       :sent="item.user?.human"
       :name="item.user?.name"
     />
+    <q-chat-message
+        :name="botUser?.name"
+        :sent="botUser?.human"
+        v-if="waiting"
+      >
+        <q-spinner-dots size="2rem" />
+      </q-chat-message>
   </div>
 
   <q-input
@@ -46,6 +53,7 @@ userStore.user = { name: 'John', human: true };
 const botUser = { name: 'Bot', human: false };
 
 const text = ref('');
+var waiting = false;
 
 async function submit() {
   if (text.value) {
@@ -64,9 +72,11 @@ async function submit() {
     };
 
     text.value = '';
-    fetch('/api/submit', requestOptions).then((response) =>
-      console.log(response),
+    fetch('/api/submit', requestOptions).then((response) => {
+      console.log(response);
+    }
     );
+    waiting = true;
 
     scrollToBottom();
     emit('reloadVisualization');
@@ -94,6 +104,7 @@ onMounted(() => {
         user: botUser,
         timestamp: new Date().toISOString()
       });
+      waiting = false;
       scrollToBottom();
       console.log(`Received response: ${data.message}`);
     },
