@@ -1,0 +1,16 @@
+services:
+  response-generator-medalpaca:
+    env_file: setup.env
+    expose: 
+    - 5000
+    build: ./modules/response-generator-medalpaca/.
+    volumes:
+    - ./modules/response-generator-medalpaca/app:/app
+    depends_on: []
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
