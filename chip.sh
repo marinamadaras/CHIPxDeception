@@ -38,6 +38,11 @@ for core_module in ${core_modules[@]}; do
         modules_up+=${core_module##*:}" "
 done
 
+if [[ -z "$1" ]] ; then
+echo "Finished setting up!"
+exit 0
+fi
+
 case $1 in
   build)
     if [[ -z "$2" ]] ; then
@@ -61,21 +66,20 @@ case $1 in
         docker compose -f docker-compose-base.yml ${str} up "${@:2}"
     fi
     ;;
-
   stop)
+    echo "Taking down full system..."
+    docker compose -f docker-compose-base.yml ${str} down
+    ;;
+  clean)
     echo "Taking down full system and removing volume data..."
     docker compose -f docker-compose-base.yml ${str} down -v
     ;;
-
-  restart)
-    echo "Restarting system with clean volume data..."
-    docker compose -f docker-compose-base.yml ${str} down -v
-    docker compose -f docker-compose-base.yml ${str} build ${modules_up}
-    docker compose -f docker-compose-base.yml ${str} up ${modules_up}
+  config)
+    echo "Showing the merged compose file that will be used..."
+    docker compose -f docker-compose-base.yml ${str} config
     ;;
-
   *)
-    echo "Please use either 'build', 'start', 'stop', 'restart'."
+    echo "Please use either 'build', 'start', 'stop', 'clean', 'config', or call without args to generate the necessary configuration without doing anything else."
     echo "Add space-separated module names afterwards to perform the operation for specific modules."
     ;;
 esac
