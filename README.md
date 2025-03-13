@@ -21,7 +21,7 @@ The system works with the notion of "core" modules, and "non-core" modules. Ther
 - Response Generator
 - Logger
 
-Any module that doesn't classify as one of these module types, is considered not to be a core module. All core modules must expose a `/process` route, which they use to transfer JSON data to one another via POST requests. A description of the expected models for the bodies of the requests will after this subsection.
+Any module that doesn't classify as one of these module types, is considered not to be a core module. All core modules must expose a `/process` route, which they use to transfer JSON data to one another via POST requests. A description of the expected models for the bodies of the requests will come after this subsection.
 
 The general communication structure is as follows:
 ```                         
