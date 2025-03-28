@@ -6,6 +6,7 @@ Welcome! This README will explain the general structure of the CHIP Modular Syst
 ## Requirements
 - Make sure bash is installed on the system (consider [using WSL2 on Windows](https://learn.microsoft.com/en-us/windows/wsl/install)).
 - The system uses [Docker Compose](https://docs.docker.com/compose/install/), make sure it is installed and functioning. Docker Desktop is recommended for good overview, using the WSL2 backend is also highly recommended.
+  On Mac, remove the line containing ``"credsStore"`` from ``~/.docker/config.json``.
 - A system that has a CPU with virtualization support.
 - [OPTIONAL]: GPU with CUDA support, for running LLMs locally.
 
@@ -224,3 +225,4 @@ The previous section should already have outlined most of the details regarding 
 
 ## Tests and CI
 WIP
+
