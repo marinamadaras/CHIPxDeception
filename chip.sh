@@ -38,6 +38,7 @@ for core_module in ${core_modules[@]}; do
         modules_up+=${core_module##*:}" "
 done
 
+
 if [[ -z "$1" ]] ; then
 echo "Finished setting up!"
 exit 0
@@ -78,8 +79,22 @@ case $1 in
     echo "Showing the merged compose file that will be used..."
     docker compose -f docker-compose-base.yml ${str} config
     ;;
+  list)
+    echo "Listing all available modules..."
+    for module in ${modules[@]}; do
+            echo - ${module%%:*}" "
+    done
+    ;;
+  auto-completion)
+    the_source=$(readlink -f -- "${BASH_SOURCE[0]}")
+    the_dirname=$(dirname "${the_source}")
+    the_filename=$(basename "${the_source}")
+    echo $'\n'complete -W \"\$"(ls -C ${the_dirname}/modules/)"\" ./${the_filename} >> ~/.bashrc
+    . ~/.bashrc
+    echo "Added auto-completion to .bashrc"
+    ;;
   *)
-    echo "Please use either 'build', 'start', 'stop', 'clean', 'config', or call without args to generate the necessary configuration without doing anything else."
+    echo "Please use either 'build', 'start', 'stop', 'clean', 'config', 'list', 'auto-completion', or call without args to generate the necessary configuration without doing anything else."
     echo "Add space-separated module names afterwards to perform the operation for specific modules."
     ;;
 esac

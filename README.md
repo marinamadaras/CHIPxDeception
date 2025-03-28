@@ -126,6 +126,12 @@ Full command overview for the `chip.sh` script:
 
 - `chip.sh clean`: removes all volume data, giving you a clean slate.
 
+- `chip.sh list`: prints a list of all available modules.
+
+- `chip.sh auto-complete`: adds auto-complete for the script. If you prefix this command with `source`, it will immediately load the auto-complete definitions in the current terminal, otherwise you have to restart the terminal for it to take effect.
+
+
+
 For instance, if you are in the process of creating a new module, and just want to build it, you would use `chip.sh build my-cool-new-module`. If you want to both build and start it, you would use `chip.sh start my-cool-new-module`. Say your module has `redis` and `knowledge-demo` as dependencies, then docker-compose will automatically also build and start the `redis` and `knowledge-demo` modules for you.
 
 ## Generic Module Structure
