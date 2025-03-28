@@ -1,9 +1,15 @@
 services:
   response-generator-medalpaca:
     env_file: setup.env
+    environment:
+      - CUDA_VISIBLE_DEVICES=0  # Use an empty string here to force just CPU usage.
     expose: 
     - 5000
-    build: ./modules/response-generator-medalpaca/.
+    build: 
+      context: ./modules/response-generator-medalpaca/.
+      args:
+        CUDA_MAJOR: 12
+        CUDA_MINOR: 4
     volumes:
     - ./modules/response-generator-medalpaca/app:/app
     depends_on: []
