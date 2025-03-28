@@ -18,14 +18,14 @@ core_modules=($(docker run --rm -v "${PWD}":/workdir mikefarah/yq '.* | key + ":
 for module in ${modules[@]}; do
     name=${module%%:*}
     name=${name//-/_}
-    name=${name^^}
+    name=$( echo $name | tr '[:lower:]' '[:upper:]')
     echo ${name}=${module} >> setup.env
     for core_module in ${core_modules[@]}; do
         core=${core_module%%:*}
-        core=${core^^}
+        core=$( echo $core | tr '[:lower:]' '[:upper:]')
         core_name=${core_module##*:}
         core_name=${core_name//-/_}
-        core_name=${core_name^^}
+        core_name=$( echo $core_name | tr '[:lower:]' '[:upper:]')
         if [[ "$core_name" == "$name" ]]; then
             echo $core=$name >> setup.env
         fi
