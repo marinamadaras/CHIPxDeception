@@ -1,9 +1,7 @@
-from logging import currentframe
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
-from app.gemini import generate
-import os
+from gemini import generate
 import requests
 
 GREETINGS = (
@@ -79,14 +77,6 @@ def generate_response(reasoner_response):
     elif response_type == ResponseType.Q:
         if 'prioritizedOver' in response_data['data']:
             message = generate(f"The user talking to you is {name}. {name} is a diabetes patient. You currently know too little about {name} to help them. In particular, you would like to get to know what {name}'s general values are and how they prioritize them, so you can recommend activities to {name} that involve their values.", sentence_data['sentence'])
-
-
-            # message = "that depends on what you find important. What do you prioritize"
-        # elif 'hasPhysicalActivityHabit' in response_data['data']:
-        #     message = f"{name}, {question}?"
-            # message = "what physical activities do you regularly do"
-        # question = formulate_question(response_data['data'])
-        # message = 
 
     elif response_type == ResponseType.A:
         activity = formulate_advice(response_data['data'][1])

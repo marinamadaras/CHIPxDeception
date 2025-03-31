@@ -1,7 +1,9 @@
 from flask import Blueprint, current_app, request
 import app.util
 
+
 bp = Blueprint('main', __name__)
+
 
 @bp.route('/')
 def hello():

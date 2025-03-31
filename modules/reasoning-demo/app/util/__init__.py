@@ -1,6 +1,6 @@
 from rdflib import Graph, Namespace, URIRef, Literal
-from app.reason_question import reason_question
-from app.reason_advice import reason_advice
+from app.util.reason_question import reason_question
+from app.util.reason_advice import reason_advice
 from flask import current_app
 
 import requests

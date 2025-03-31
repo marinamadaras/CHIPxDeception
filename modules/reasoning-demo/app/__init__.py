@@ -1,7 +1,7 @@
 from flask import Flask
 from logging.handlers import HTTPHandler
 from logging import Filter
-from app.db import close_db
+from app.util.db import close_db
 import os
 
 

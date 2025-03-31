@@ -1,5 +1,5 @@
 from SPARQLWrapper import JSON
-import app.db
+import app.util.db
 
 
 # Should probably somehow talk to the knowledge graph and get info from there?
@@ -33,7 +33,7 @@ def query_for_presence(fact: str) -> bool:
         {fact}
     }}
     """
-    db_connection = app.db.get_db_connection()
+    db_connection = app.util.db.get_db_connection()
     db_connection.setQuery(query)
     db_connection.setReturnFormat(JSON)
     db_connection.addParameter('Accept', 'application/sparql-results+json')

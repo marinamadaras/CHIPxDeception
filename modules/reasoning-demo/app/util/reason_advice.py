@@ -1,7 +1,7 @@
 from SPARQLWrapper import JSON
 from typing import Tuple
 from flask import current_app
-import app.db
+import app.util.db
 
 
 # Should probably somehow talk to the knowledge graph and get info from there?
@@ -45,7 +45,7 @@ def recommended_activities_sorted(name):
     ORDER BY DESC(?nSecondaryValues)}}
     """
     current_app.logger.debug(query)
-    db_connection = app.db.get_db_connection()
+    db_connection = app.util.db.get_db_connection()
     db_connection.setQuery(query)
     db_connection.setReturnFormat(JSON)
     db_connection.addParameter('Accept', 'application/sparql-results+json')

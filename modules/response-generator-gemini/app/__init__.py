@@ -1,7 +1,7 @@
 from flask import Flask
 from logging.handlers import HTTPHandler
 from logging import Filter
-from app.llm_extension import LLMExtension
+from app.util.llm_extension import LLMExtension
 import os
 
 

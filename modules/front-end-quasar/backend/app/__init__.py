@@ -3,7 +3,6 @@ from flask_sse import sse
 from flask_cors import CORS
 from logging.handlers import HTTPHandler
 from logging import Filter
-from app.db import close_db
 import os
 
 
@@ -38,7 +37,6 @@ def create_app(test=False):
     if redis_address:
         flask_app.config['REDIS_ADDRESS'] = redis_address
         flask_app.config['REDIS_URL'] = f'redis://{redis_address}'
-        flask_app.teardown_appcontext(close_db)
 
     from app.routes import bp
     flask_app.register_blueprint(bp)
