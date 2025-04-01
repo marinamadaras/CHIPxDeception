@@ -1,24 +1,26 @@
 from flask import Flask
 from logging.handlers import HTTPHandler
 from logging import Filter
-from app.llm_extension import LLMExtension
+from app.util.llm_extension import LLMExtension
 import os
 
 
-
 # NOTE: This approach will load the model for every instance of the application.
-llm = LLMExtension()
+# Hence, this is only suitable for development purposes where scaling is not relevant.
+llm: LLMExtension = LLMExtension()
 
 class ServiceNameFilter(Filter):
     def filter(self, record):
         record.service_name = "Response Generator"
         return True
 
+
 def core_module_address(core_module):
     try:
         return os.environ[os.environ[core_module]]
     except KeyError:
         return None
+
 
 def create_app(test=False):
     flask_app = Flask(__name__)
@@ -36,7 +38,7 @@ def create_app(test=False):
     from app.routes import bp
     flask_app.register_blueprint(bp)
 
-    llm.init_app(flask_app)
+    llm.init_app(flask_app, os.environ['MODEL_NAME'])
 
 
     return flask_app

@@ -2,23 +2,14 @@ from logging import currentframe
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
-from app.medalpaca import generate
+from medalpaca import generate
 import os
 import requests
 
-GREETINGS = (
-    "hi",
-    "hello",
-    "yo",
-    "hey"
-)
+GREETINGS = ("hi", "hello", "yo", "hey")
 
-CLOSING = (
-    "bye",
-    "thanks",
-    "thank you",
-    "goodbye"
-)
+CLOSING = ("bye", "thanks", "thank you", "goodbye")
+
 
 class ResponseType(StrEnum):
     Q = auto()
@@ -29,17 +20,18 @@ def formulate_question(query: str) -> str:
     """
     Formulates a natural language question based on which facts are missing from the DB.
     """
-    if 'prioritizedOver' in query:
+    if "prioritizedOver" in query:
         return "that depends on what you find important. What do you prioritize"
-    elif 'hasPhysicalActivityHabit' in query:
+    elif "hasPhysicalActivityHabit" in query:
         return "what physical activities do you regularly do"
     raise ValueError(f"Cannot formulate question for query {query}")
+
 
 # =============================================================================
 # def formulate_advice(activity: str) -> str:
 #     prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
 #     activity = activity.replace(prefix, "")
-# 
+#
 #     activity = activity.replace("_", " ")
 #     return activity
 # =============================================================================
@@ -59,9 +51,9 @@ def formulate_advice(activity: str) -> str:
 
 
 def generate_response(reasoner_response):
-    sentence_data = reasoner_response['sentence_data']
+    sentence_data = reasoner_response["sentence_data"]
     try:
-        name = sentence_data['patient_name']
+        name = sentence_data["patient_name"]
     except KeyError:
         name = "Unknown patient"
     current_app.logger.debug(f"reasoner_response: {reasoner_response}")
@@ -70,24 +62,18 @@ def generate_response(reasoner_response):
 
     message = "I don't understand, could you try rephrasing it?"
 
-    if sentence_data['sentence'].lower() in GREETINGS:
+    if sentence_data["sentence"].lower() in GREETINGS:
         message = f"Hi, {name}"
 
-    elif sentence_data['sentence'].lower() in CLOSING:
+    elif sentence_data["sentence"].lower() in CLOSING:
         message = f"Goodbye {name}"
 
     elif response_type == ResponseType.Q:
-        if 'prioritizedOver' in response_data['data']:
+        if "prioritizedOver" in response_data["data"]:
             message = f"{name}, {generate(f'{name} is a patient. {name} has diabetes. {name} is asking the question in this prompt, given after this context. {name} wants to find out what you would recommend based on his values and priorities in life. You are a medical chatbot, that tries to find out information about {name} in order to answer their questions. In this case, you have too little information, because you first need to know what {name} finds important and what their values are, and how {name} prioritizes these. Ask {name} what they find important in their life, what they care about, or what their values are, and how they prioritize these.', sentence_data['sentence'])}"
-            # message = "that depends on what you find important. What do you prioritize"
-        # elif 'hasPhysicalActivityHabit' in response_data['data']:
-        #     message = f"{name}, {question}?"
-            # message = "what physical activities do you regularly do"
-        # question = formulate_question(response_data['data'])
-        # message = 
 
     elif response_type == ResponseType.A:
-        activity = formulate_advice(response_data['data'][1])
+        activity = formulate_advice(response_data["data"][1])
         message = f"How about the activity '{activity}', {name}?"
 
     return message
@@ -100,4 +86,3 @@ def send_message(reasoner_response):
     front_end_address = current_app.config.get("FRONTEND_ADDRESS", None)
     if front_end_address:
         requests.post(f"http://{front_end_address}/process", json=payload)
-
