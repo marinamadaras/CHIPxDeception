@@ -56,7 +56,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        source ${{ matrix.dir.base }}/config.env.default
         coverage run --branch -m pytest app/tests/
         coverage xml --omit="app/tests/**"
     - name: Python Coverage
