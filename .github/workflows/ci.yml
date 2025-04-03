@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Quasar front-end module
+name: Full CI workflow
 
 on:
   push:
@@ -14,12 +14,25 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
-
+  collect_dirs:
     runs-on: ubuntu-latest
+    outputs:
+      dirs: ${{ steps.dirs.outputs.dirs }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: dirs
+        run: echo "dirs=$(ls -d modules/*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')" >> ${GITHUB_OUTPUT}
+
+
+  build:
+    needs: collect_dirs
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: ${{ fromJson(needs.collect_dirs.outputs.dirs) }}
     defaults:
       run:
-        working-directory: ./quasar/backend
+        working-directory: ${{ matrix.dir }}
         
     steps:
     - uses: actions/checkout@v4
@@ -45,5 +58,5 @@ jobs:
     - name: Python Coverage
       uses: orgoro/coverage@v3.2
       with:
-        coverageFile: ./quasar/backend/coverage.xml
+        coverageFile: ${{ matrix.dir }}/coverage.xml
         token: ${{ secrets.GITHUB_TOKEN }}
