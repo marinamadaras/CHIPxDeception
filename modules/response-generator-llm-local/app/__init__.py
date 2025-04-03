@@ -38,7 +38,9 @@ def create_app(test=False):
     from app.routes import bp
     flask_app.register_blueprint(bp)
 
-    llm.init_app(flask_app, os.environ['MODEL_NAME'])
+    # Do not load the model for testing/CI
+    if not test:
+        llm.init_app(flask_app, os.environ['MODEL_NAME'])
 
 
     return flask_app

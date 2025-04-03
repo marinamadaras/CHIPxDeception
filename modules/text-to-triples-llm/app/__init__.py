@@ -36,7 +36,9 @@ def create_app(test=False):
     if reasoner_address:
         flask_app.config['REASONER_ADDRESS'] = reasoner_address
 
-    model.init_app(flask_app)
+    # Do not load the model for testing/CI
+    if not test:
+        model.init_app(flask_app)
 
 
     from app.routes import bp
