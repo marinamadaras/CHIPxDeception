@@ -38,7 +38,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: cardinalby/export-env-action@v1
       with:
-        envFile: './config.env.default'
+        envFile: ${{ matrix.dir }}/config.env.default
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
