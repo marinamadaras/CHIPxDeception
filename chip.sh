@@ -6,6 +6,10 @@ fi
 
 for dir in ./modules/*; do
     str+=" -f ${dir}/compose.yml"
+    if [ ! -f $dir/config.env ]; then
+        echo "No module configuration found for module ${dir%%:*}, creating one from defaults..."
+        cp $dir/config.env.default $dir/config.env
+    fi
 done
 
 docker compose -f docker-compose-base.yml ${str} config > /tmp/chiptemp

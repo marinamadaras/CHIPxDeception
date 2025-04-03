@@ -1,8 +1,8 @@
 services:
   response-generator-gemini:
-    env_file: setup.env
-    environment:
-      - GEMINI_API_KEY=AIzaSyDW25d6aDXTIYFtezju7aUUDHx-d8_j3RY
+    env_file: 
+    - setup.env
+    - ./modules/response-generator-gemini/config.env
     expose: 
     - 5000
     build: ./modules/response-generator-gemini/.

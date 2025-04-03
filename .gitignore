@@ -239,3 +239,4 @@ front-end/src/flagged
 *.Identifier
 setup.env
 core-modules.yaml
+modules/*/config.env
