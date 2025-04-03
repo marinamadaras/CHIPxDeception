@@ -34,7 +34,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.dir }}
-    env: ${{ fromJson(${{ matrix.dir }}/config.env.default) }}
+    env: ${{ fromJson(format('{0}/config.env.default', matrix.dir)) }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
