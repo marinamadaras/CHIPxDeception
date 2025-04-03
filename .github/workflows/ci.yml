@@ -21,7 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: dirs
-        run: echo "dirs=$(find modules/*/ -type d -wholename */app/tests -printf '%h\n' | sed -e 's/\/app$//g' | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')" >> ${GITHUB_OUTPUT}
+        run: echo "dirs=$(find modules/*/ -type d -wholename */app/tests -printf '{"path":"%h", "base":"%H"}\n' | sed -e 's/\/app",/",/g' | sed -e 's/\/"}/"}/g' | jq --
+slurp --compact-output '.')" >> ${GITHUB_OUTPUT}
 
 
   build:
@@ -33,12 +34,12 @@ jobs:
         dir: ${{ fromJson(needs.collect_dirs.outputs.dirs) }}
     defaults:
       run:
-        working-directory: ${{ matrix.dir }}
+        working-directory: ${{ matrix.dir.path }}
     steps:
     - uses: actions/checkout@v4
     - uses: cardinalby/export-env-action@v1
       with:
-        envFile: ${{ matrix.dir }}/config.env.default
+        envFile: ${{ matrix.dir.base }}/config.env.default
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -62,5 +63,5 @@ jobs:
     - name: Python Coverage
       uses: orgoro/coverage@v3.2
       with:
-        coverageFile: ${{ matrix.dir }}/coverage.xml
+        coverageFile: ${{ matrix.dir.path }}/coverage.xml
         token: ${{ secrets.GITHUB_TOKEN }}
