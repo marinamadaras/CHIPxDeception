@@ -2,7 +2,7 @@ from logging import currentframe
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
-from medalpaca import generate
+from app.util.medalpaca import generate
 import os
 import requests
 

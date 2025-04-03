@@ -1,4 +1,4 @@
-from app import llm
+import app
 
 
 def generate(context, message):
@@ -12,7 +12,7 @@ def generate(context, message):
     {message}
     """
 
-    response = llm.client.models.generate_content(model="gemini-2.0-flash", contents=[prompt])
+    response = app.llm.client.models.generate_content(model="gemini-2.0-flash", contents=[prompt])
 
     print("Output: ", response.text)
 

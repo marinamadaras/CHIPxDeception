@@ -2,7 +2,7 @@ import requests
 import os
 
 from flask import current_app
-from t2t_bert import process_input_output
+from app.util.t2t_bert import process_input_output
 from typing import Dict, Any
 
 

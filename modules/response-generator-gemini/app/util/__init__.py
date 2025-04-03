@@ -1,7 +1,7 @@
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
-from gemini import generate
+from app.util.gemini import generate
 import requests
 
 GREETINGS = (

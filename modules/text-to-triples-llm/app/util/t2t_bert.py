@@ -1,7 +1,7 @@
 import torch
 from transformers import BertTokenizerFast
 import json
-from app import model
+import app
 
 
 
@@ -97,5 +97,5 @@ def process_input_output(input_data):
     Returns:
         triples: A dict with a list of S-P-O triples extracted from the input.
     """
-    triples = predict_and_form_triples(input_data, model.get_model(), tokenizer, label_map)
+    triples = predict_and_form_triples(input_data, app.model.get_model(), tokenizer, label_map)
     return {"triples": triples}
