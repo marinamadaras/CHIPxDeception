@@ -52,8 +52,10 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
+      uses: cardinalby/export-env-action@v1
+      with:
+        envFile: '${{ matrix.dir }}/config.env.default' 
       run: |
-        source ./config.env.default
         coverage run --branch -m pytest app/tests/
         coverage xml --omit="app/tests/**"
     - name: Python Coverage
