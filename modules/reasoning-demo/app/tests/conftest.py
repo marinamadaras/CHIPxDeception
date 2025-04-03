@@ -63,7 +63,7 @@ def reason():
 
 @pytest.fixture()
 def get_db_connection():
-    with patch('app.db.get_db_connection') as get_db_connection:
+    with patch('app.util.db.get_db_connection') as get_db_connection:
         conn = MagicMock()
         get_db_connection.return_value = conn
         yield get_db_connection, conn

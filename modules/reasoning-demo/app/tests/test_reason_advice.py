@@ -1,6 +1,6 @@
 from unittest.mock import ANY, patch
 from flask import g
-from app.reason_advice import reason_advice, recommended_activities_sorted, rule_based_advice
+from app.util.reason_advice import reason_advice, recommended_activities_sorted, rule_based_advice
 from SPARQLWrapper import JSON
 from app.tests.conftest import AnyStringWith
 
@@ -23,6 +23,6 @@ def test_recommended_activities_sorted(application, get_db_connection, sample_na
 
 
 def test_rule_based_advice(application, sample_name):
-    with application.app_context(), patch('app.reason_advice.recommended_activities_sorted') as rec:
+    with application.app_context(), patch('app.util.reason_advice.recommended_activities_sorted') as rec:
         rule_based_advice(sample_name)
         rec.assert_called_once_with(sample_name)
