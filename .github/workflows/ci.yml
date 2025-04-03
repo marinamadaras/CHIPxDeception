@@ -21,8 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: dirs
-        run: echo "dirs=$(find modules/*/ -type d -wholename */app/tests -printf '{\"path\":\"%h\", \"base\":\"%H\"}\n' | sed -e 's/\/app\",/\",/g' | sed -e 's/\/\"}/\"}/g' | jq --
-slurp --compact-output '.')" >> ${GITHUB_OUTPUT}
+        run: echo "dirs=$(find modules/*/ -type d -wholename */app/tests -printf '{\"path\":\"%h\", \"base\":\"%H\"}\n' | sed -e 's/\/app\",/\",/g' | sed -e 's/\/\"}/\"}/g' | jq --slurp --compact-output '.')" >> ${GITHUB_OUTPUT}
 
 
   build:
