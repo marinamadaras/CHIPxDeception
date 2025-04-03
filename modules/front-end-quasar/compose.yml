@@ -2,7 +2,9 @@ services:
   front-end-quasar:
     expose: 
     - 5000
-    env_file: setup.env
+    env_file: 
+    - setup.env
+    - ./modules/front-end-quasar/config.env
     build: ./modules/front-end-quasar/.
     ports: 
     - "9000:9000"

@@ -1,6 +1,8 @@
 services: 
   knowledge-demo:
-    env_file: setup.env
+    env_file: 
+    - setup.env
+    - ./modules/knowledge-demo/config.env
     build: ./modules/knowledge-demo/.
     expose:
     - 7200

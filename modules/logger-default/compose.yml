@@ -1,6 +1,8 @@
 services:
   logger-default:
-    env_file: setup.env
+    env_file: 
+    - setup.env
+    - ./modules/logger-default/config.env
     expose:
     - 5000
     build: ./modules/logger-default/.

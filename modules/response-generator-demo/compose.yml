@@ -1,6 +1,8 @@
 services:
   response-generator-demo:
-    env_file: setup.env
+    env_file:
+    - setup.env
+    - ./modules/response-generator-demo/config.env
     expose: 
     - 5000
     build: ./modules/response-generator-demo/.

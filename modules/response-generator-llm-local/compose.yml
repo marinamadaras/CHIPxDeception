@@ -1,6 +1,8 @@
 services:
   response-generator-llm-local:
-    env_file: setup.env
+    env_file: 
+    - setup.env
+    - ./modules/response-generator-llm-local/config.env
     environment:
       - CUDA_VISIBLE_DEVICES=0  # Use an empty string here to force just CPU usage.
     expose: 

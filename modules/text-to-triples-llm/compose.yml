@@ -1,6 +1,8 @@
 services:
   text-to-triples-llm:
-    env_file: setup.env
+    env_file: 
+    - setup.env
+    - ./modules/text-to-triples-llm/config.env
     expose: 
     - 5000
     build: ./modules/text-to-triples-llm/.
