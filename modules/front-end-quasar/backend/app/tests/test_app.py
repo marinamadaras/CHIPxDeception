@@ -8,7 +8,7 @@ def test_hello(client):
 
 def test_response(client, message_data):
     with patch('flask_sse.sse') as sse:
-        res = client.post(f"/response", json=message_data)
+        res = client.post(f"/process", json=message_data)
         sse.publish.assert_called_once_with(message_data, type='response')
         assert res.status_code == 200 and len(res.text) > 0
 
