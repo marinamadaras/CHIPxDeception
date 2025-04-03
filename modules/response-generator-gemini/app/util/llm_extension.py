@@ -3,7 +3,7 @@ from google import genai
 
 
 class LLMExtension:
-    client: genai.Client
+    client: genai.Client | None = None
 
 
     def __init__(self, app=None):

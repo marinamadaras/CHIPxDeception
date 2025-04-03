@@ -4,7 +4,7 @@ import torch
 
 
 class LLMExtension:
-    pipe: Pipeline
+    pipe: Pipeline | None = None
 
 
     def __init__(self, app=None, model_name=None):
