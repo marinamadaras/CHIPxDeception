@@ -11,7 +11,7 @@ This Response Generator uses Google's `genai` module to query Gemini for generat
 
 ## Usage
 Instructions:
-1. Make sure to have [an API key for Gemini](https://ai.google.dev/gemini-api/docs/api-key), and set the `GEMINI_API_KEY` environment variable in the module's `compose.yml` to it
+1. Make sure to have obtained [an API key for Gemini](https://ai.google.dev/gemini-api/docs/api-key), and set the `GEMINI_API_KEY` environment variable in the module's `config.env` to it
 2. Configure `core-modules.yaml` to use this module as the response generator.
 
 ## Input/Output
@@ -42,4 +42,4 @@ Communication between the core modules occurs by sending a POST request to the `
 None.
 
 ## Required Resources
-- Internet connection
+- Internet connection for using Google Gemini

@@ -7,7 +7,7 @@
 | **Access URL**       | N/A                 |
 
 ## Description
-This Response Generator is intended as a demo module, for following the demo scenario outlined in `demo_scenario.md`. It scans the output obtained by the reasoner and then picks a pre-defined response based on that.
+This Response Generator is intended as a demo module, for following the demo scenario outlined in `demo_scenario.md` in the root folder of the CHIP project. It scans the output obtained by the reasoner and then picks a pre-defined response based on that.
 
 ## Usage
 Instructions:
