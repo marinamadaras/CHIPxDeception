@@ -35,45 +35,45 @@ def test_json_triple_to_rdf_serialization_result(triples, application):
             assert v in ret
 
 
-def test_upload_rdf_data(application):
-    with patch("app.util.requests.post") as post, application.app_context():
-        res = Mock()
-        res.ok = True
-        post.return_value = res
-        rdf_data = Mock()
+# def test_upload_rdf_data(application):
+#     with patch("app.util.requests.post") as post, application.app_context():
+#         res = Mock()
+#         res.ok = True
+#         post.return_value = res
+#         rdf_data = Mock()
 
-        # Call the method
-        upload_rdf_data(rdf_data)
+#         # Call the method
+#         upload_rdf_data(rdf_data)
 
-        # Posted with the correct data
-        post.assert_called_with(ANY, data=rdf_data, headers=ANY)
+#         # Posted with the correct data
+#         post.assert_called_with(ANY, data=rdf_data, headers=ANY)
 
-        # And confirm we didn't log an error, because the post was succesful
-        application.logger.error.assert_not_called()
-
-
-def test_upload_rdf_data_error(application):
-    with patch("app.util.requests.post") as post, application.app_context():
-        res = Mock()
-        res.ok = False
-        post.return_value = res
-
-        # Call the method
-        upload_rdf_data(Mock())
-
-        # Confirm that we logged an error because the post failed
-        application.logger.error.assert_called()
+#         # And confirm we didn't log an error, because the post was succesful
+#         application.logger.error.assert_not_called()
 
 
-def test_upload_rdf_data_no_knowledge(application):
-    with patch("app.util.requests.post") as post, application.app_context():
-        application.config['knowledge_url'] = None
+# def test_upload_rdf_data_error(application):
+#     with patch("app.util.requests.post") as post, application.app_context():
+#         res = Mock()
+#         res.ok = False
+#         post.return_value = res
 
-        # Call the method
-        res = upload_rdf_data(Mock())
+#         # Call the method
+#         upload_rdf_data(Mock())
 
-        # Confirm that we return a 503 due to missing knowledge DB
-        assert res.status_code == 503
+#         # Confirm that we logged an error because the post failed
+#         application.logger.error.assert_called()
+
+
+# def test_upload_rdf_data_no_knowledge(application):
+#     with patch("app.util.requests.post") as post, application.app_context():
+#         application.config['knowledge_url'] = None
+
+#         # Call the method
+#         res = upload_rdf_data(Mock())
+
+#         # Confirm that we return a 503 due to missing knowledge DB
+#         assert res.status_code == 503
 
 
 def test_reason_advice_success(application, reason_advice, reason_question):

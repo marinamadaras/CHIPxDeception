@@ -26,7 +26,9 @@ def process():
 
 @bp.route('/store', methods=['POST'])
 def store():
-    triples = request.json
+    json_data = request.json
+    triples = json_data['triples']
+
     try:
         app.util.store_knowledge(triples)
         return 'OK', 200

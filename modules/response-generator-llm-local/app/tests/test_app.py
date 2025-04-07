@@ -8,7 +8,7 @@ def test_hello(client):
 
 def test_submit_reasoner_response(client, reasoner_response):
     with patch('app.util') as util:
-        client.post(f"/submit-reasoner-response", json=reasoner_response.question)
+        client.post(f"/process", json=reasoner_response.question)
         util.send_message.assert_called_once()
 
 

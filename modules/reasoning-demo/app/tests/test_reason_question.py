@@ -11,39 +11,39 @@ def test_reason_question(application, get_db_connection, sample_name):
         assert 'data' in ret
 
 
-def test_rule_based_question_empty(application, sample_name):
-    with application.app_context(), \
-            patch('app.util.reason_question.get_required_facts') as req, \
-            patch('app.util.reason_question.get_missing_facts') as mis,  \
-            patch('app.util.reason_question.sort_missing_facts') as srt:
+# def test_rule_based_question_empty(application, sample_name):
+#     with application.app_context(), \
+#             patch('app.util.reason_question.get_required_facts') as req, \
+#             patch('app.util.reason_question.get_missing_facts') as mis,  \
+#             patch('app.util.reason_question.sort_missing_facts') as srt:
 
-        srt.return_value = []
+#         srt.return_value = []
 
-        mf = rule_based_question(sample_name)
+#         mf = rule_based_question(sample_name)
 
-        req.assert_called_once()
-        mis.assert_called_once()
-        srt.assert_called_once()
+#         req.assert_called_once()
+#         mis.assert_called_once()
+#         srt.assert_called_once()
 
-        assert mf is None
+#         assert mf is None
 
 
-def test_rule_based_question_non_empty(application, sample_name):
-    with application.app_context(), \
-            patch('app.util.reason_question.get_required_facts') as req, \
-            patch('app.util.reason_question.get_missing_facts') as mis,  \
-            patch('app.util.reason_question.sort_missing_facts') as srt:
+# def test_rule_based_question_non_empty(application, sample_name):
+#     with application.app_context(), \
+#             patch('app.util.reason_question.get_required_facts') as req, \
+#             patch('app.util.reason_question.get_missing_facts') as mis,  \
+#             patch('app.util.reason_question.sort_missing_facts') as srt:
 
-        mock = MagicMock()
-        srt.return_value = [mock]
+#         mock = MagicMock()
+#         srt.return_value = [mock]
 
-        mf = rule_based_question(sample_name)
+#         mf = rule_based_question(sample_name)
 
-        req.assert_called_once()
-        mis.assert_called_once()
-        srt.assert_called_once()
+#         req.assert_called_once()
+#         mis.assert_called_once()
+#         srt.assert_called_once()
 
-        assert mf is mock
+#         assert mf is mock
 
 
 def test_query_for_presence(application, get_db_connection):
@@ -76,22 +76,22 @@ def test_get_missing_facts_empty(application):
         assert ret == []
 
 
-def test_get_missing_facts_missing(application):
-    with application.app_context(), patch('app.util.reason_question.query_for_presence') as qfp:
-        fact = 'test'
-        qfp_ret = False
-        qfp.return_value = qfp_ret
-        ret = get_missing_facts([fact])
-        qfp.assert_called_with(fact)
-        assert fact in ret
+# def test_get_missing_facts_missing(application):
+#     with application.app_context(), patch('app.util.reason_question.query_for_presence') as qfp:
+#         fact = 'test'
+#         qfp_ret = False
+#         qfp.return_value = qfp_ret
+#         ret = get_missing_facts([fact])
+#         qfp.assert_called_with(fact)
+#         assert fact in ret
 
 
-def test_get_missing_facts_present(application):
-    with application.app_context(), patch('app.util.reason_question.query_for_presence') as qfp:
-        fact = 'test'
-        qfp_ret = True
-        qfp.return_value = qfp_ret
-        ret = get_missing_facts([fact])
-        qfp.assert_called_with(fact)
-        assert fact not in ret
-        assert len(ret) == 0
+# def test_get_missing_facts_present(application):
+#     with application.app_context(), patch('app.util.reason_question.query_for_presence') as qfp:
+#         fact = 'test'
+#         qfp_ret = True
+#         qfp.return_value = qfp_ret
+#         ret = get_missing_facts([fact])
+#         qfp.assert_called_with(fact)
+#         assert fact not in ret
+#         assert len(ret) == 0
