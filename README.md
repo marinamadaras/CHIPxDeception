@@ -100,7 +100,7 @@ These are the models that the core modules expect the JSON bodies to conform to,
 The Logger module is special, in that its format is already pre-determined by Python's logging framework.
 
 ## General Usage and Configuration
-The system has a set of pre-configured core modules that it will start up with, specified in `core-modules.yaml`. This file initially does not exist, but it will be created along with other configuration files by running the `chip.sh` script without any subcommands, and it looks like this:
+The system has a set of pre-configured core modules that it will start up with, specified in `core-modules.yaml`. This file initially does not exist, but it will be created (from default values) along with other configuration files by running the `chip.sh` script without any subcommands, and it looks like this:
 
 ```YAML
 logger_module: logger-default
@@ -114,9 +114,12 @@ The module names correspond to the name of the directory they reside in within `
 
 A second configuration file that will be generated is `setup.env`. This environment file contains the url/port mappings for the modules, which are derived from their respective compose files. This is how the modules know how to reach each other. The mapping uses the following convention: `MODULE_NAME_CONVERTED_TO_CAPS_AND_UNDERSCORES=<module-name>:<module-port>`. 
 
+Finally, every module also has its own `config.env` which will be copied from the default values in their `config.env.default` file. This `config.env` file is not tracked by git, so it is a good place to store things like API keys that modules may need. They will be available within the container as an environment variable.
+
 Full command overview for the `chip.sh` script:
 
-- `chip.sh` (*without args*): generates the `core-modules.yaml` file if it doesn't exist, and then generates `setup.env` containing the module mappings. `setup.env` will always be overwritten if it already exists. This also takes place for any of the subcommands.
+
+- `chip.sh` (*without args*): generates the `core-modules.yaml` file if it doesn't exist from `core-modules.yaml.default`, and then generates `setup.env` containing the module mappings. `setup.env` will always be overwritten if it already exists. This also takes place for any of the subcommands. It also generates `config.env` for any module that didn't have it yet, from their `config.env.default`. Configs are not git-tracked, only their defaults are.
 
 - `chip.sh start [module name ...]`: builds and starts the system pre-configured with the current core modules specified in `core-modules.yaml` and their dependencies, or starts specific modules and their dependencies given by name and separated by spaces.
 
@@ -128,8 +131,7 @@ Full command overview for the `chip.sh` script:
 
 - `chip.sh list`: prints a list of all available modules.
 
-- `chip.sh auto-complete`: adds auto-complete for the script. If you prefix this command with `source`, it will immediately load the auto-complete definitions in the current terminal, otherwise you have to restart the terminal for it to take effect.
-
+- `chip.sh auto-complete`: adds auto-completion for the modules to the script. If you prefix this command with `source`, it will immediately load the auto-complete definitions in the current terminal, otherwise you have to restart the terminal for it to take effect.
 
 
 For instance, if you are in the process of creating a new module, and just want to build it, you would use `chip.sh build my-cool-new-module`. If you want to both build and start it, you would use `chip.sh start my-cool-new-module`. Say your module has `redis` and `knowledge-demo` as dependencies, then docker-compose will automatically also build and start the `redis` and `knowledge-demo` modules for you.
@@ -161,7 +163,7 @@ services:  # This is always present at the root.
     depends_on: ["redis"]  # Modules that this module depends on and that will be started/built along with it.
 ```
 
-Modules should generally use the Python Flask backend, which means that somewhere in the module's directory (often the root) there will be an `app` directory, which is the Flask app. The Flask apps are always structured as follows:
+Modules should generally use the Python Flask backend, which means that somewhere in the module's directory (often the root, but sometimes it is nested, e.g. see `front-end-quasar`) there will be an `app` directory, which is the Flask app. The Flask apps are always structured as follows:
 ```
 app
 |- tests...            --> The tests
@@ -229,6 +231,8 @@ The previous section should already have outlined most of the details regarding 
 
     You can run the module from the root folder using `./chip.sh start <MODULE_NAME>`.
 
+7. Add any configuration you want to expose to `config.env.default`. They are made available as environment variables within the container, and the user may edit the generated `config.env` to tweak the settings you wish to make configurable. Think of things such as API keys, model name, performance settings, etc.
+
 ## Tests and CI
-WIP
+CI is setup for the project, and will run automatically for any module that has a `tests` folder within an `app` folder, which is generally the file structure that Flask adheres to. Modules that have no such folder will not be considered for the test runner.
 
