@@ -1,13 +1,13 @@
 # This is a CHIP Module
 | Properties    |                     |
 | ------------- | -------------       |
-| **Name**      | LLM Triple Extractor |
+| **Name**      | Rule-Based Triple Extractor |
 | **Type**      | Triple Extractor  |
 | **Core**      | Yes |
 | **Access URL**       | N/A |
 
 ## Description
-This triple extractor uses a fine-tuned BERT model to extract triples from sentences.
+A rule-based triple extractor module, using nltk to disect a sentence and extract triples from it. It is compatible with the demo knowledge, in that it transforms the extracted predicates into terms that the knowledge database understands.
 
 ## Usage
 Instructions:
