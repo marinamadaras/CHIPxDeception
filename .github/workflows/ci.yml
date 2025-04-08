@@ -57,7 +57,7 @@ jobs:
     - name: Test with pytest
       run: |
         coverage run --branch -m pytest app/tests/
-        coverage xml --omit="app/tests/**"
+        coverage xml --omit="app/tests/**, /tmp/*"
     - name: Python Coverage
       uses: orgoro/coverage@v3.2
       with:
