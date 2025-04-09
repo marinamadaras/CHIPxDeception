@@ -1,0 +1,10 @@
+requests==2.32.3
+Flask==3.0.3
+strenum==0.4.15
+bitsandbytes
+accelerate
+transformers
+protobuf
+tiktoken
+blobfile
+sentencepiece

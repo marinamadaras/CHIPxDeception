@@ -1,0 +1,13 @@
+services:
+  front-end-gradio:
+    expose: 
+    - 5000
+    env_file:
+    - setup.env
+    - ./modules/front-end-gradio/config.env
+    build: ./modules/front-end-gradio/.
+    ports: ["8000:8000"]
+    volumes:
+    - ./modules/front-end-gradio/src:/src
+    - ./modules/front-end-gradio/data:/data
+    depends_on: []

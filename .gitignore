@@ -237,3 +237,6 @@ front-end/src/flagged
 *.sublime-project
 *.sublime-workspace
 *.Identifier
+setup.env
+core-modules.yaml
+modules/*/config.env

@@ -1,0 +1,11 @@
+services:
+  response-generator-demo:
+    env_file:
+    - setup.env
+    - ./modules/response-generator-demo/config.env
+    expose: 
+    - 5000
+    build: ./modules/response-generator-demo/.
+    volumes:
+    - ./modules/response-generator-demo/app:/app
+    depends_on: []
