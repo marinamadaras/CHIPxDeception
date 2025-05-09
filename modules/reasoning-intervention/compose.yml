@@ -1,0 +1,13 @@
+services:
+  reasoning-intervention:
+    env_file: 
+    - setup.env
+    - ./modules/reasoning-intervention/config.env
+    expose: 
+    - 5000
+    build: ./modules/reasoning-intervention/.
+    volumes:
+    - ./modules/reasoning-intervention/app:/app
+    - ./modules/reasoning-intervention/data:/data
+    depends_on:
+    - knowledge-demo

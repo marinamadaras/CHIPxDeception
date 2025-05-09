@@ -1,17 +1,18 @@
 from flask import Flask
 from logging.handlers import HTTPHandler
 from logging import Filter
+from app.util.db import close_db
+from app.util.lightweight_reasoner import LightweightReasoner
 from app.util.llm_extension import LLMExtension
-from app.framing_strategy.framing_strategy_service import FramingStrategyService
 import os
 
 # NOTE: This approach will load the model for every instance of the application.
 llm = LLMExtension()
-response_framer = FramingStrategyService()
+reasoner = LightweightReasoner()
 
 class ServiceNameFilter(Filter):
     def filter(self, record):
-        record.service_name = "Response Generator"
+        record.service_name = "Reasoner"
         return True
 
 def core_module_address(core_module):
@@ -29,17 +30,22 @@ def create_app(test=False):
         flask_app.logger.addFilter(ServiceNameFilter())
         flask_app.logger.addHandler(http_handler)
 
-    frontend_address = core_module_address("FRONTEND_MODULE")
-    if frontend_address:
-        flask_app.config["FRONTEND_ADDRESS"] = frontend_address
+    response_generator_address = core_module_address("RESPONSE_GENERATOR_MODULE")
+    if response_generator_address:
+        flask_app.config["RESPONSE_GENERATOR_ADDRESS"] = response_generator_address
+
+    knowledge_address = os.environ.get("KNOWLEDGE_DEMO", None)
+    if knowledge_address:
+        repository_name = 'repo-test-1'  # This is temporary
+        flask_app.config['knowledge_url'] = f"http://{knowledge_address}/repositories/{repository_name}"
+        flask_app.teardown_appcontext(close_db)
 
     from app.routes import bp
     flask_app.register_blueprint(bp)
 
     flask_app.config['GEMINI_API_KEY'] = os.environ['GEMINI_API_KEY']
-    flask_app.config['FRAMING_STRATEGY'] = os.environ['FRAMING_STRATEGY']
 
+    reasoner.init_app(flask_app)
     llm.init_app(flask_app)
-    response_framer.init_app(flask_app)
 
     return flask_app

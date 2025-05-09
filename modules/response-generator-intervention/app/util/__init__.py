@@ -1,16 +1,16 @@
 from flask import current_app
 from enum import auto
 from strenum import StrEnum
-from app.util.gemini import generate
 import requests
-import logging
+import app
 
-GREETINGS = (
+
+GREETINGS = {
     "hi",
-    "hello",
-    "yo",
-    "hey"
-)
+    "hello", 
+    "hey", 
+    "good morning", 
+    "good night"}
 
 CLOSING = (
     "bye",
@@ -22,73 +22,45 @@ CLOSING = (
 class ResponseType(StrEnum):
     Q = auto()
     A = auto()
+    G = auto() # greeting, goes beyond just saying hi back
+    C = auto() # closing
 
 
-def formulate_question(query: str) -> str:
-    """
-    Formulates a natural language question based on which facts are missing from the DB.
-    """
-    if 'prioritizedOver' in query:
-        return "that depends on what you find important. What do you prioritize"
-    elif 'hasPhysicalActivityHabit' in query:
-        return "what physical activities do you regularly do"
-    raise ValueError(f"Cannot formulate question for query {query}")
-
-# =============================================================================
-# def formulate_advice(activity: str) -> str:
-#     prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
-#     activity = activity.replace(prefix, "")
-# 
-#     activity = activity.replace("_", " ")
-#     return activity
-# =============================================================================
-
-
-def formulate_advice(activity: str) -> str:
-    prefix = "http://www.semanticweb.org/aledpro/ontologies/2024/2/userKG#"
-    activity = activity.replace(prefix, "")
-
-    # Split activity on underscore and take the last part if it starts with "activity"
-    parts = activity.split("_")
-    if parts[0] == "activity":
-        activity = "_".join(parts[1:])
-
-    activity = activity.replace("_", " ")
-    return activity
-
-
+# This method takes the reasoner_response, and splits it into:
+# [] sentence_data: a dictionary of the name, timestamp and the sentence typed by the user
+# [] response_type: which initially comes from the reasoner as either:
+#                    -> Q from a question
+#                    -> A from advice
+#                  but, it is extended with G from greeting and C from closing statement
+# [] response_data: a dictionary with all the data resulting from the reasoning process
+# This method then delegates the generation of the response to the framed response generator
+# which pieces together all this data into natural language, through a specific
+# framing strategy (e.g. neutral)
 def generate_response(reasoner_response):
     sentence_data = reasoner_response['sentence_data']
-    try:
-        name = sentence_data['patient_name']
-    except KeyError:
-        name = "Unknown patient"
-    current_app.logger.debug(f"reasoner_response: {reasoner_response}")
+
     response_type = ResponseType(reasoner_response["type"])
     response_data = reasoner_response["data"]
-    logging.critical("-------------REASONER RESPONSE\n" + str(response_data))
 
-    message = "I don't understand, could you try rephrasing it?"
-
-    if sentence_data['sentence'].lower() in GREETINGS:
-        message = f"Hi, {name}"
-
+    if sentence_data['sentence'].lower() in GREETINGS: # todo: make this more robust
+        response_type = ResponseType.G
     elif sentence_data['sentence'].lower() in CLOSING:
-        message = f"Goodbye {name}"
+        response_type = ResponseType.C    
+    # response_type = ResponseType.A
 
-    elif response_type == ResponseType.Q:
-        logging.critical("-------------SENTENCE DATA\n" + str(sentence_data['sentence']))
-        # if 'prioritizedOver' in response_data['data']:
-        message = generate(f"The user talking to you is {name}. {name} is a diabetes patient. You currently know too little about {name} to help them. In particular, you would like to get to know what {name}'s general values are and how they prioritize them, so you can recommend activities to {name} that involve their values.", sentence_data['sentence'])
+    response_framer = app.response_framer.get()
 
-    elif response_type == ResponseType.A:
-        activity = formulate_advice(response_data['data'][1])
-        message = f"How about the activity '{activity}', {name}?"
-
-    return message
+    return response_framer.generate_response(
+            response_data,
+              sentence_data,
+                response_type)
 
 
+# This takes the input from the reasoner, creates a
+# message for the user through LLM and sends it
+# to the frontend module :)
 def send_message(reasoner_response):
+    current_app.logger.debug(f"-------------REASONER RESPONSE: {reasoner_response}")
     message = generate_response(reasoner_response)
     payload = {"message": message}
     current_app.logger.debug(f"sending response message: {payload}")
