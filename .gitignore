@@ -240,3 +240,5 @@ front-end/src/flagged
 setup.env
 core-modules.yaml
 modules/*/config.env
+
+.DS_Store
