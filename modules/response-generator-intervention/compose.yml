@@ -1,0 +1,11 @@
+services:
+  response-generator-intervention:
+    env_file: 
+    - setup.env
+    - ./modules/response-generator-intervention/config.env
+    expose: 
+    - 5000
+    build: ./modules/response-generator-intervention/.
+    volumes:
+    - ./modules/response-generator-intervention/app:/app
+    depends_on: []
