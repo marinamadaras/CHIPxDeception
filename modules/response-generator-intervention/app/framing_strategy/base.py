@@ -15,9 +15,13 @@ class FramingStrategy(ABC):
         pass
 
     @abstractmethod
-    def generate_advice(self, context: dict, user_input: dict) -> str:
+    def generate_answer(self, context: dict, user_input: dict) -> str:
         pass
 
     @abstractmethod
     def generate_question(self, context: dict, user_input: dict) -> str:
+        pass
+
+    @abstractmethod
+    def generate_ack(self, context: dict, user_input: dict) -> str:
         pass

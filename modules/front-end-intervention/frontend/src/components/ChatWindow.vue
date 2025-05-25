@@ -3,20 +3,20 @@
   <div
     class="col-11  q-pa-md"
     ref="messagesDiv"
-    style="overflow-y: scroll; overflow-x: hidden;  background-color: #252525;"
+    style="overflow-y: scroll; overflow-x: hidden;  background-color: #FDFCFA;"
   >
     <q-chat-message
       v-for="item in messageStore.messages"
       :key="item.message"
       :sent="item.user?.human"
       :name="item.user?.name"
-      :bg-color="item.user?.human ? 'grey-4' : 'purple-3'"
+      :bg-color="item.user?.human ? 'grey-3' : 'light-blue-11'"
       > 
       <template v-slot:name>
-        <span class="text-grey-4">{{ item.user?.name }}</span>
+        <span class="text-grey-9" style =  "font-family: 'Trebuchet MS'; font-size: 12px">{{ item.user?.name }}</span>
       </template>
       <template v-slot:default >
-          <div style="max-width: 450px; width: fit-content;">
+          <div class="text-blue-grey-10" style="max-width: 450px; width: fit-content; font-family: 'Trebuchet MS'">
             <q-message-text >
               {{ item.message }}
             </q-message-text>
@@ -30,8 +30,8 @@
         :name="botUser?.name"
         :sent="botUser?.human"
         v-if="waiting"
-        bg-color="purple-3"
-        class="text-white"
+        bg-color="light-blue-11"
+        class = "text-blue-grey-9"
       >
         <q-spinner-dots size="2rem" />
       </q-chat-message>
@@ -47,15 +47,18 @@
         dense
         @keyup.enter="submit"
         dark
-        color="grey-4"
-        bg-color="grey-9"
-        style="margin-top: 7px"
+        color="light-blue-3"
+        bg-color="brown-1"
+        style="margin-top: 7px;font-family: 'Trebuchet MS' "
+        input-class="text-grey-9"
+        input-style="padding-top: 1.5em; padding-bottom:0.5em; font-family: 'Trebuchet MS'"
+        label-color="grey-6" 
       >
         <template v-slot:before>
-          <q-avatar icon="account_circle" color="grey-8" text-color="grey-3" />
+          <q-avatar icon="account_circle" color="light-blue-3" text-color="grey-1" />
         </template>
         <template v-slot:after>
-          <q-btn round dense flat icon="send" @click="submit" color="grey-2" />
+          <q-btn round dense flat icon="send" @click="submit" color="light-blue-5" />
         </template>
       </q-input>
     </div>

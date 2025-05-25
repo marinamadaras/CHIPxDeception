@@ -1,11 +1,13 @@
 import importlib
 from app.framing_strategy import FramingStrategy
 from app.framing_strategy .neutral_strategy import NeutralStrategy
-from app.framing_strategy .empathetic_strategy import EmpatheticStrategy
+from app.framing_strategy .empathic_strategy import EmpathicStrategy
+from app.framing_strategy .self_affirming_strategy import SelfAffirmingStrategy
 
 STRATEGY_MAP = {
     "neutral": NeutralStrategy,
-    "empathetic": EmpatheticStrategy
+    "empathic": EmpathicStrategy,
+    "affirming": SelfAffirmingStrategy
 }
 
 class FramingStrategyService:

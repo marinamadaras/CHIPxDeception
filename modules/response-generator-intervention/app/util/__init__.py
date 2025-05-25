@@ -5,25 +5,13 @@ import requests
 import app
 
 
-GREETINGS = {
-    "hi",
-    "hello", 
-    "hey", 
-    "good morning", 
-    "good night"}
-
-CLOSING = (
-    "bye",
-    "thanks",
-    "thank you",
-    "goodbye"
-)
-
 class ResponseType(StrEnum):
-    Q = auto()
-    A = auto()
-    G = auto() # greeting, goes beyond just saying hi back
-    C = auto() # closing
+    G = "greeting"
+    C = "closing"
+    Q = "question"
+    ANS = "answer"
+    ACK = "ack"
+    ERR = "error"
 
 
 # This method takes the reasoner_response, and splits it into:
@@ -41,12 +29,6 @@ def generate_response(reasoner_response):
 
     response_type = ResponseType(reasoner_response["type"])
     response_data = reasoner_response["data"]
-
-    if sentence_data['sentence'].lower() in GREETINGS: # todo: make this more robust
-        response_type = ResponseType.G
-    elif sentence_data['sentence'].lower() in CLOSING:
-        response_type = ResponseType.C    
-    # response_type = ResponseType.A
 
     response_framer = app.response_framer.get()
 
