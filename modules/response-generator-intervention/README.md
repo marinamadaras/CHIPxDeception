@@ -1,32 +1,45 @@
-# This is a CHIP Module
-| Properties    |                     |
-| ------------- | -------------       |
-| **Name**      | Gemini Response Generator |
-| **Type**      | Response Generator  |
-| **Core**      | Yes |
-| **Access URL**       | N/A                 |
+# Response Generator
+| Properties    |                                 |
+| ------------- |---------------------------------|
+| **Name**      | Intervention Response Generator |
+| **Type**      | Response Generator              |
+
 
 ## Description
-This Response Generator uses Google's `genai` module to query Gemini for generating a response, given an appropriately built up context and the latest message that the user sent.
+This response generator was developed to support conversations in the context of the BSc Project **To deceit or self-deceit?**
+Most of the logic was **copied** from the `response-generator-gemini` module, and then adapted for the use-case. 
 
-## Usage
-Instructions:
+## Pre-requisites for Setup
 1. Make sure to have obtained [an API key for Gemini](https://ai.google.dev/gemini-api/docs/api-key), and set the `GEMINI_API_KEY` environment variable in the module's `config.env` to it
 2. Configure `core-modules.yaml` to use this module as the response generator.
 
-## Input/Output
-Communication between the core modules occurs by sending a POST request to the `/process` route with an appropriate body, as detailed below.
+## Framing Strategies
+The response generator uses a framing strategy to generate responses. The available strategies are:
+- `neutral`: responses use a neutral tone, providing information as is.
+- `empathic`: responses are generated with a cognitively empathic and soft tone, attempting to understanding the user better.
+- `affirming`: responses are generated with an affirming tone, based on the idea of self-affirmations to validate the user's personal values.
+
+Only one can be used at a time, and it is set in the `config.env` file of the module. 
+
 
 ### Input from `Reasoner`
 ```JSON
 	{
-        "sentence_data": {
-            "patient_name": <string>,   // The name of the user currently chatting.
-            "sentence": <string>,       // The sentence that the user submitted.
-            "timestamp": <string>       // The time at which the user submitted the sentence (ISO format).
+        "sentence_data": {              // This is actually ignored.
+            "patient_name": <string>,   
+            "sentence": <string>,       
+            "timestamp": <string>      
         },
-		"type": <string: Q|A>,          // Whether the reasoner decided to give an answer (A) or to request more information (Q).
-		"data": <dict>                  // A dict containing the output of the reasoner.
+  
+        "type": <string>,               // The type of response being generated, corresponds to "response_type" in the data.
+        "data":                         // The data to be used by the response generator.
+            {                     
+              "response_type": <string>,                       // The type of response to be generated, one of ack, question, answer, greeting, closing.
+              "value": <string>,                               // The content that the response should contain, as atomic as possible.
+              "reason": <string>,                              // The LLM's justification for the given response.
+              "soft_self_management_indicators": [<string>],   // A list of inferred indicators that might indicate struggle with self-management.
+              "personal_values": [<string>]                    // A list of personal values that the user has expressed in (previous) conversations.
+            }       
 	}
 ```
 ### Output to `Front End`
@@ -35,11 +48,10 @@ Communication between the core modules occurs by sending a POST request to the `
         "message": <string>             // The generated message.
     }
 ```
-## API (routes, descriptions, models)
-- [GET] `/`: default 'hello' route, to check whether the module is alive and kicking.
 
 ## Internal Dependencies
-None.
+- reasoning-intervention
 
 ## Required Resources
-- Internet connection for using Google Gemini
+- Internet connection
+- Gemini API Key

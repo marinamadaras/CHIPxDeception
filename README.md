@@ -1,14 +1,16 @@
-# CHIP Adaptation for BSc Project: To deceive or self-deceive
+# CHIP Adaptation for BSc Project: To deceive or self-deceive?
 
-This project is an adaptation of the CHIP Modular System done in the context of the BSc project **To deceive or self-deceive** at the TU Delft. This repository is forked from the original CHIP one, and has implemented 
-three new modules: [front-end-intervention](./modules/front-end-intervention/) , [reasoning-intervention](./modules/reasoning-intervention/) and [response-generator-intervention](./modules/response-generator-intervention/).
+This project is an adaptation of the CHIP Modular System done in the context of the BSc Project **To deceive or self-deceive?** at the [Delft University of Technology](https://www.tudelft.nl) (TU Delft). This repository is forked from the original [CHIP](https://github.com/Archer6621/chip-demo) one.
 
+My contribution consists of three new modules: [front-end-intervention](./modules/front-end-intervention/), [reasoning-intervention](./modules/reasoning-intervention/) and [response-generator-intervention](./modules/response-generator-intervention/), which clone the original modules [front-end-quasar](./modules/front-end-quasar/), [reasoning-demo](./modules/reasoning-demo/) and [response-generator-gemini](./modules/response-generator-gemini/). The original modules were adapted to support my research on the topic of **deception prevention in diabetes lifestyle management systems**.  
+
+## Documentation
 To set up the CHIP system, first take a look at the _original documentation below_ and then follow the steps from the [Intervention Setup Documentation](documentation/INTERVENTION_SETUP.md).
-
 
 You can find more documentation about the project in the [documentation](./documentation/) folder.
 
 ***
+# Original README.md
 
 # CHIP Modular System
 
